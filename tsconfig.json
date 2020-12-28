@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "jsx": "react-native",
+    "lib": ["dom", "esnext"],
+    "moduleResolution": "node",
+    "noEmit": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "baseUrl": "src",
+    "paths": {
+      "*": ["*", "*.ios", "*.android"],
+      "@/ad-hocs/*": ["./ad-hocs/*"],
+      "@/assets/*": ["./assets/*"],
+      "@/components/*": ["./components/*"],
+      "@/contexts/*": ["./contexts/*"],
+      "@/exceptions/*": ["./exceptions/*"],
+      "@/graphql/*": ["./graphql/*"],
+      "@/hooks/*": ["./hooks/*"],
+      "@/mechanisms/*": ["./mechanisms/*"],
+      "@/models/*": ["./models/*"],
+      "@/render-props/*": ["./render-props/*"],
+      "@/utils/*": ["./utils/*"]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
