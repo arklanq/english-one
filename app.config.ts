@@ -1,6 +1,6 @@
-import { ExpoConfig, ConfigContext } from '@expo/config';
+import {ConfigContext, ExpoConfig} from '@expo/config';
 
-export default ({ config }: ConfigContext): ExpoConfig => ({
+export default ({config}: ConfigContext): ExpoConfig => ({
   ...config,
   name: 'English One',
   slug: 'english-one',
@@ -9,23 +9,21 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   platforms: ['android'],
   icon: './src/assets/icons/simple-icon.png',
   splash: {
-    'image': './src/assets/splash/splash.png',
-    'resizeMode': 'contain',
-    'backgroundColor': '#ffffff'
+    image: './src/assets/splash/splash.png',
+    resizeMode: 'contain',
+    backgroundColor: '#ffffff',
   },
   updates: {
-    fallbackToCacheTimeout: 0
+    fallbackToCacheTimeout: 0,
   },
-  assetBundlePatterns: [
-    'src/assets/**/*'
-  ],
+  assetBundlePatterns: ['src/assets/**/*'],
   ios: {
-    supportsTablet: true
+    supportsTablet: true,
   },
   android: {
     adaptiveIcon: {
       foregroundImage: './src//assets/icons/adaptive-icon.png',
-      backgroundColor: '#FFFFFF'
-    }
+      backgroundColor: '#FFFFFF',
+    },
   },
 });
