@@ -6,7 +6,27 @@
   "scripts": {
     "start": "expo start",
     "start-clean": "expo start -c",
-    "android": "expo start --android"
+    "start-android": "expo start --android",
+    "type-check": "tsc",
+    "lint": "eslint '**/*.{ts,tsx}' --quiet --fix",
+    "format": "prettier --write '**/*.{ts,tsx}'"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "expo": "~40.0.0",
@@ -19,10 +39,22 @@
   },
   "devDependencies": {
     "@babel/core": "~7.9.0",
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
     "@expo/config": "^3.3.22",
     "@types/react": "~16.9.35",
     "@types/react-dom": "~16.9.8",
     "@types/react-native": "~0.63.2",
+    "@types/yup": "^0.29.11",
+    "@typescript-eslint/eslint-plugin": "^4.11.1",
+    "@typescript-eslint/parser": "^4.11.1",
+    "eslint": "^7.16.0",
+    "eslint-config-universe": "^6.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^4.3.6",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
     "typescript": "~4.0.0"
   }
 }
