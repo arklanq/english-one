@@ -7,9 +7,9 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
   version: '0.1.0',
   orientation: 'portrait',
   platforms: ['android'],
-  icon: './assets/icon.png',
+  icon: './src/assets/icons/simple-icon.png',
   splash: {
-    'image': './assets/splash.png',
+    'image': './src/assets/splash/splash.png',
     'resizeMode': 'contain',
     'backgroundColor': '#ffffff'
   },
@@ -17,14 +17,14 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
     fallbackToCacheTimeout: 0
   },
   assetBundlePatterns: [
-    '**/*'
+    'src/assets/**/*'
   ],
   ios: {
     supportsTablet: true
   },
   android: {
     adaptiveIcon: {
-      foregroundImage: './assets/adaptive-icon.png',
+      foregroundImage: './src//assets/icons/adaptive-icon.png',
       backgroundColor: '#FFFFFF'
     }
   },
