@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "jsx": "react-native",
-    "lib": ["dom", "esnext"],
+    "lib": ["esnext"],
     "moduleResolution": "node",
     "noEmit": true,
     "skipLibCheck": true,
@@ -27,6 +27,7 @@
       "@/hooks/*": ["./hooks/*"],
       "@/mechanisms/*": ["./mechanisms/*"],
       "@/models/*": ["./models/*"],
+      "@/redux-store/*": ["./redux-store/*"],
       "@/render-props/*": ["./render-props/*"],
       "@/utils/*": ["./utils/*"]
     }
