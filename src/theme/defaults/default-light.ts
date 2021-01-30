@@ -83,6 +83,7 @@ const materialUiTheme: ITheme = {
     },
     misc: {
       divider: 'rgba(255, 255, 255, 0.24)',
+      tint: '#303F9F',
       barColor: '#303F9F',
       headerColor: '#3F51b5',
     },

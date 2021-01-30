@@ -1,8 +1,27 @@
 import {fontName} from '@/redux-store/features/app/fonts';
-
-import {IThemePrototype} from '../../theme/createTheme';
+import {IThemePrototype} from '@/theme/createTheme';
 
 const theme: IThemePrototype = {
+  palette: {
+    primary: {
+      light: '#FFE0B2',
+      main: '#FF9800',
+      dark: '#F57C00',
+      contrastText: '#FFFFFF',
+    },
+    secondary: {
+      light: '#FFCCBC',
+      main: '#FF5722',
+      dark: '#E64A19',
+      contrastText: '#FFFFFF',
+    },
+    misc: {
+      //divider: '#BDBDBD',
+      barColor: '#F57C00',
+      tint: '#F57C00',
+      headerColor: '#FF9800',
+    },
+  },
   typography: {
     h1: {
       fontFamily: fontName['Poppins-Light'],

@@ -1,13 +1,16 @@
-import {StatusBar} from 'expo-status-bar';
+import {StylesProvider} from '@idkman/react-native-styles';
 import React, {memo, useEffect} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
 import {Provider as PaperProvider} from 'react-native-paper';
-import {StylesProvider} from 'react-native-styles';
+import {Theme as PaperTheme} from 'react-native-paper/lib/typescript/types';
 import {useDispatch, useSelector} from 'react-redux';
 
-import useAppStateController from '@/components/views/App/useAppStateController';
-import useNetworkInfoController from '@/components/views/App/useNetworkInfoController';
-import useThemePicker from '@/components/views/App/useThemePicker';
+import AppStatusBar from '@/components/atoms/AppStatusBar';
+import useAppearanceController from '@/components/other/App/useAppearanceController';
+import useAppStateController from '@/components/other/App/useAppStateController';
+import useNetworkInfoController from '@/components/other/App/useNetworkInfoController';
+import usePaperThemePicker from '@/components/other/App/usePaperThemePicker';
+import useThemePicker from '@/components/other/App/useThemePicker';
+import Router from '@/components/other/Router';
 import IExpoProps from '@/models/ExpoProps';
 import {ITheme} from '@/models/theme/ITheme';
 import {bootstrapAppAction} from '@/redux-store/actions/bootstrapAppAction';
@@ -18,35 +21,26 @@ export interface IAppProps {
   exp: IExpoProps;
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
 function App(_props: IAppProps) {
   const dispatch: DispatchType = useDispatch();
   const isAppReady: boolean = useSelector(selectIsAppReady);
-  const theme: ITheme | null = useThemePicker();
+  const theme: ITheme = useThemePicker();
+  const paperTheme: PaperTheme = usePaperThemePicker(theme);
 
   useAppStateController();
   useNetworkInfoController();
+  useAppearanceController();
 
   useEffect(() => {
     dispatch(bootstrapAppAction());
   }, [dispatch]);
 
-  if (isAppReady && theme) {
+  if (isAppReady) {
     return (
       <StylesProvider<ITheme> theme={theme}>
-        <PaperProvider>
-          <View style={styles.container}>
-            <Text>Open up App.tsx to start working on your app!</Text>
-            <StatusBar style='auto' />
-          </View>
+        <PaperProvider theme={paperTheme}>
+          <AppStatusBar />
+          <Router />
         </PaperProvider>
       </StylesProvider>
     );

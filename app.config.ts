@@ -37,9 +37,9 @@ export default ({config}: ConfigContext): ExpoConfig => ({
     },
   },
   androidStatusBar: {
-    hidden: true,
-    translucent: false,
-    barStyle: 'dark-content',
-    backgroundColor: '#00000000',
+    hidden: false,
+    translucent: true,
+    barStyle: 'light-content',
+    backgroundColor: '#fafafa',
   },
 });

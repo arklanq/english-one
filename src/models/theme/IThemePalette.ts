@@ -37,6 +37,7 @@ export default interface IThemePalette {
   };
   misc: {
     divider: string;
+    tint: string;
     barColor: string;
     headerColor: string;
   };

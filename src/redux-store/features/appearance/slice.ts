@@ -5,7 +5,7 @@ export type ColorScheme = Exclude<ColorSchemeName, null | undefined>;
 
 export interface IColorSchemeInfo {
   system: ColorScheme;
-  userPreference?: ColorScheme | 'automatic';
+  userPreference: ColorScheme | 'automatic';
 }
 
 export interface IInitialState {
@@ -15,23 +15,30 @@ export interface IInitialState {
 export const initialState: IInitialState = {
   colorScheme: {
     system: Appearance.getColorScheme() ?? 'light',
+    userPreference: 'automatic',
   },
 };
 
 const appearanceSlice = createSlice({
   name: 'APPEARANCE',
-  initialState,
+  initialState: initialState as IInitialState, // better ts autocompletation in reducers
   reducers: {
     setSystemColorScheme: (state: IInitialState, action: PayloadAction<IColorSchemeInfo['system']>) => ({
       ...state,
-      systemColorScheme: action.payload,
+      colorScheme: {
+        ...state.colorScheme,
+        system: action.payload,
+      },
     }),
     setUserPreferredColorScheme: (
       state: IInitialState,
       action: PayloadAction<Exclude<IColorSchemeInfo['userPreference'], undefined>>
     ) => ({
       ...state,
-      userPreferredColorScheme: action.payload,
+      colorScheme: {
+        ...state.colorScheme,
+        userPreference: action.payload,
+      },
     }),
   },
 });

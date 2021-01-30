@@ -29,6 +29,7 @@
       "@/models/*": ["./models/*"],
       "@/redux-store/*": ["./redux-store/*"],
       "@/render-props/*": ["./render-props/*"],
+      "@/theme/*": ["./theme/*"],
       "@/utils/*": ["./utils/*"]
     }
   },

@@ -1,14 +1,10 @@
-import {Action, createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {AppState, AppStateStatus} from 'react-native';
 
-export interface IInitialState {
-  ready: boolean;
-  state: AppStateStatus;
-  devMode: boolean;
-}
+import {IChangeStatusError, IChangeStatusReady, IInitialState} from './types';
 
 export const initialState: IInitialState = {
-  ready: false,
+  status: 'loading',
   state: AppState.currentState,
   devMode: false,
 };
@@ -17,14 +13,17 @@ const appSlice = createSlice({
   name: 'APP',
   initialState,
   reducers: {
-    setAppReady: (state: IInitialState, action: PayloadAction<boolean>) => {
-      return {...state, ...{appReady: action.payload}};
+    setAppStatus: (state: IInitialState, action: PayloadAction<IChangeStatusReady | IChangeStatusError>) => {
+      return {
+        ...state,
+        ...{status: action.payload.status, error: action.payload.status === 'error' ? action.payload.error : undefined},
+      };
     },
     setAppState: (state: IInitialState, action: PayloadAction<AppStateStatus>) => {
       return {...state, ...{appState: action.payload}};
     },
-    activateDevMode: (state: IInitialState, _action: Action) => {
-      return {...state, ...{devMode: true}};
+    switchDevMode: (state: IInitialState, action: PayloadAction<boolean>) => {
+      return {...state, ...{devMode: action.payload}};
     },
   },
 });

@@ -7,7 +7,7 @@ import IThemeTypography, {IFontTypography} from '@/models/theme/IThemeTypography
 
 import defaultDarkTheme from './defaults/default-dark';
 import defaultLightTheme from './defaults/default-light';
-import {isPredefinedFontColor} from './predefined-font-colors';
+import {isPredefinedFontColor} from './utilities/predefined-font-colors';
 
 export type IThemePrototype = DeepPartial<ITheme>;
 
