@@ -56,9 +56,11 @@
     "react-native-reanimated": "^1.13.2",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.15.2",
+    "react-native-svg": "^12.1.0",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "serialize-error": "^8.0.1",
+    "victory-native": "^35.3.1",
     "yup": "^0.32.8"
   },
   "devDependencies": {

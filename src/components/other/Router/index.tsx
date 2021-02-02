@@ -24,6 +24,7 @@ const Stack = createStackNavigator<StackParamList>();
 const useStyles = makeStyles((theme: ITheme) => ({
   mainMenuTitle: {
     ...theme.typography.h5,
+    fontFamily: 'BowlbyOneSC-Regular',
     color: theme.palette.contrastText.primary,
     top: 6,
   },

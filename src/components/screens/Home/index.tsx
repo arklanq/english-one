@@ -3,6 +3,7 @@ import React, {Fragment, memo, useCallback} from 'react';
 import {View} from 'react-native';
 import {Divider, IconButton, List} from 'react-native-paper';
 
+import ProgressChart from '@/components/molecules/ProgressChart';
 import {ScreenNavigationProp, StackParamList} from '@/components/other/Router';
 import listItems, {IListItem} from '@/components/screens/Home/list';
 import {ITheme} from '@/models/theme/ITheme';
@@ -18,6 +19,9 @@ const useStyles = makeStyles((theme: ITheme) => ({
   },
   arrowRight: {
     alignSelf: 'center',
+  },
+  chart: {
+    flex: 1,
   },
 }));
 
@@ -52,6 +56,8 @@ function Home(props: IProps) {
           </Fragment>
         ))}
       </List.Section>
+
+      <ProgressChart style={stylesheet.chart} />
     </View>
   );
 }

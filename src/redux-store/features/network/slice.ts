@@ -1,8 +1,5 @@
 import {NetInfoStateType} from '@react-native-community/netinfo/src/internal/types';
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {ColorSchemeName} from 'react-native';
-
-export type ColorScheme = Exclude<ColorSchemeName, null | undefined>;
 
 export interface INetworkInfo {
   type: NetInfoStateType;
