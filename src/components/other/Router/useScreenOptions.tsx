@@ -9,7 +9,7 @@ import {INavigateGlobally} from './';
 
 const useStyles = makeStyles((theme: ITheme) => ({
   title: {
-    ...theme.typography.h5,
+    ...theme.typography.h6,
     color: theme.palette.contrastText.primary,
     top: 6,
   },

@@ -2065,10 +2065,10 @@
   dependencies:
     "@types/react" "^16"
 
-"@types/react-native@~0.63.46":
-  version "0.63.46"
-  resolved "https://npm-registry.sheep.guru:443/@types%2freact-native/-/react-native-0.63.46.tgz#942df5af29046c6f22227495e00d5297cc1cea73"
-  integrity sha512-SnBnWRErpISIaWk4K8kAfIKqSPdZ8fdH6HIw7kVdz6jMl/5FAf6iXeIwRfVZg1bCMh+ymNPCpSENNNEVprxj/w==
+"@types/react-native@0.63.40":
+  version "0.63.40"
+  resolved "https://npm-registry.sheep.guru:443/@types%2freact-native/-/react-native-0.63.40.tgz#66b11824a6aadb0dde0db87bd8aff58165c7a8f8"
+  integrity sha512-y98TQBjfncIrdDrwIhxcmcad1gHKNfUKFnCBk3heYy0Gvt6BNcBeSKRvACV4cf6R1K/cNJMoS3rjaMvYhQyAgw==
   dependencies:
     "@types/react" "*"
 

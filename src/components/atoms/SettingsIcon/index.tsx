@@ -16,17 +16,7 @@ function SettingsIcon(props: ISettingsIconProps) {
     navigateGlobally('settings');
   }, []);
 
-  return (
-    <IconButton
-      icon='cog-outline'
-      color={color}
-      rippleColor={tintColor}
-      size={28}
-      onPress={handlePress}
-      accessibilityComponentType
-      accessibilityTraits
-    />
-  );
+  return <IconButton icon='cog-outline' color={color} rippleColor={tintColor} size={28} onPress={handlePress} />;
 }
 
 export default memo(SettingsIcon);
