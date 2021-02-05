@@ -5,7 +5,7 @@ import React from 'react';
 import SettingsIcon from '@/components/atoms/SettingsIcon';
 import {ITheme} from '@/models/theme/ITheme';
 
-import {INavigateGlobally} from './';
+import {INavigateGlobally} from '../index';
 
 const useStyles = makeStyles((theme: ITheme) => ({
   title: {

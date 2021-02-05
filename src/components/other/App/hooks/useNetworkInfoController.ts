@@ -5,7 +5,7 @@ import {useDispatch} from 'react-redux';
 
 import networkSlice from '@/redux-store/features/network/slice';
 import {convertToNetworkInfo} from '@/redux-store/features/network/utils';
-import {DispatchType} from '@/redux-store/types';
+import {DispatchType} from '@/redux-store/models';
 
 export default function useNetworkInfoController() {
   const dispatch: DispatchType = useDispatch();

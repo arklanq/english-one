@@ -1,46 +1,46 @@
 import {StylesProvider} from '@idkman/react-native-styles';
-import React, {memo, useEffect} from 'react';
+import {WebSQLDatabase} from 'expo-sqlite';
+import React, {memo} from 'react';
 import {Provider as PaperProvider} from 'react-native-paper';
 import {Theme as PaperTheme} from 'react-native-paper/lib/typescript/types';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 
-import AppStatusBar from '@/components/atoms/AppStatusBar';
-import useAppearanceController from '@/components/other/App/useAppearanceController';
-import useAppStateController from '@/components/other/App/useAppStateController';
-import useNetworkInfoController from '@/components/other/App/useNetworkInfoController';
-import usePaperThemePicker from '@/components/other/App/usePaperThemePicker';
-import useThemePicker from '@/components/other/App/useThemePicker';
-import Router from '@/components/other/Router';
+import useBootstrapApp from '@/components/other/App/hooks/useBootstrapApp';
+import Main from '@/components/other/Main';
+import {SQLiteProvider} from '@/contexts/SQLiteContext';
+import {getDB} from '@/database/accessor';
 import IExpoProps from '@/models/ExpoProps';
 import {ITheme} from '@/models/theme/ITheme';
-import {bootstrapAppAction} from '@/redux-store/actions/bootstrapAppAction';
 import {selectIsAppReady} from '@/redux-store/features/app/selectors';
-import {DispatchType} from '@/redux-store/types';
+
+import useAppearanceController from './hooks/useAppearanceController';
+import useAppStateController from './hooks/useAppStateController';
+import useNetworkInfoController from './hooks/useNetworkInfoController';
+import usePaperThemePicker from './hooks/usePaperThemePicker';
+import useThemePicker from './hooks/useThemePicker';
 
 export interface IAppProps {
   exp: IExpoProps;
 }
 
 function App(_props: IAppProps) {
-  const dispatch: DispatchType = useDispatch();
   const isAppReady: boolean = useSelector(selectIsAppReady);
   const theme: ITheme = useThemePicker();
   const paperTheme: PaperTheme = usePaperThemePicker(theme);
+  const database: WebSQLDatabase | null = getDB();
 
   useAppStateController();
   useNetworkInfoController();
   useAppearanceController();
+  useBootstrapApp();
 
-  useEffect(() => {
-    dispatch(bootstrapAppAction());
-  }, [dispatch]);
-
-  if (isAppReady) {
+  if (isAppReady && database) {
     return (
       <StylesProvider<ITheme> theme={theme}>
         <PaperProvider theme={paperTheme}>
-          <AppStatusBar />
-          <Router />
+          <SQLiteProvider database={database}>
+            <Main />
+          </SQLiteProvider>
         </PaperProvider>
       </StylesProvider>
     );

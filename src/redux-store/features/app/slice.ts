@@ -20,7 +20,7 @@ const appSlice = createSlice({
       };
     },
     setAppState: (state: IInitialState, action: PayloadAction<AppStateStatus>) => {
-      return {...state, ...{appState: action.payload}};
+      return {...state, ...{state: action.payload}};
     },
     switchDevMode: (state: IInitialState, action: PayloadAction<boolean>) => {
       return {...state, ...{devMode: action.payload}};

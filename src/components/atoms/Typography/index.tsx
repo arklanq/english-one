@@ -7,27 +7,33 @@ import {TypographyVariant} from '@/models/theme/IThemeTypography';
 
 export interface ITypographyProps extends TextProps {
   variant?: TypographyVariant;
+  bold?: boolean;
+  align?: TextStyle['textAlign'];
   children: string | string[];
 }
 
 type ITypographyStylesObject = Record<TypographyVariant, TextStyle>;
 
-const useStyles = makeStyles(
-  (theme: ITheme) =>
-    (Object.keys(theme.typography) as TypographyVariant[]).reduce(
-      (styles: Partial<ITypographyStylesObject>, variant: TypographyVariant) => {
-        styles[variant] = theme.typography[variant];
-        return styles;
-      },
-      {}
-    ) as ITypographyStylesObject
-);
+const useStyles = makeStyles((theme: ITheme) => ({
+  ...((Object.keys(theme.typography) as TypographyVariant[]).reduce(
+    (styles: Partial<ITypographyStylesObject>, variant: TypographyVariant) => {
+      styles[variant] = theme.typography[variant];
+      return styles;
+    },
+    {}
+  ) as ITypographyStylesObject),
+  bold: {
+    fontWeight: 'bold',
+  },
+}));
 
 function Typography(props: ITypographyProps) {
-  const {variant = 'body1', style, ...TextProps} = props;
+  const {variant = 'body1', bold, align, style, ...TextProps} = props;
   const stylesheet = useStyles();
 
-  return <Text style={[stylesheet[variant], style]} {...TextProps} />;
+  return (
+    <Text style={[stylesheet[variant], bold && stylesheet.bold, align && {textAlign: align}, style]} {...TextProps} />
+  );
 }
 
 export default memo(Typography);

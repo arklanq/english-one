@@ -3,7 +3,7 @@ import {Appearance, ColorSchemeName} from 'react-native';
 import {useDispatch} from 'react-redux';
 
 import appearanceSlice from '@/redux-store/features/appearance/slice';
-import {DispatchType} from '@/redux-store/types';
+import {DispatchType} from '@/redux-store/models';
 
 type AppearancePreferences = {
   colorScheme: ColorSchemeName;

@@ -1,5 +1,9 @@
-/*export const determineInitialNetworkInfoAction: ThunkFn = () => async (dispatch: DispatchType) => {
-  const networkState: NetworkState = await Network.getNetworkStateAsync();
-  const networkInfo: INetworkInfo = convertToNetworkInfo(networkState);
-  await dispatch(networkSlice.actions.updateNetworkInfo(networkInfo));
-};*/
+import {DispatchType, ThunkFn} from '@/redux-store/models';
+
+import {loadState} from './persistent-state';
+import exercisesSlice, {IInitialState} from './slice';
+
+export const loadExercisesStateAction: ThunkFn = () => async (dispatch: DispatchType) => {
+  const state: IInitialState = await loadState();
+  await dispatch(exercisesSlice.actions.overrideState(state));
+};

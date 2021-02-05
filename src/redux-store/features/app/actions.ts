@@ -1,6 +1,6 @@
 import * as Font from 'expo-font';
 
-import {ThunkFn} from '@/redux-store/types';
+import {ThunkFn} from '@/redux-store/models';
 
 import fonts from './fonts';
 

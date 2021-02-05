@@ -7,8 +7,8 @@ import Home from '@/components/screens/Home';
 import Settings from '@/components/screens/Settings';
 import {ITheme} from '@/models/theme/ITheme';
 
-import exercises, {IExerciseRoute} from './exercises';
-import useScreenOptions from './useScreenOptions';
+import useScreenOptions from './hooks/useScreenOptions';
+import exercises, {IExerciseRoute} from './misc/exercises';
 
 export type StackParamList = Record<
   'home' | 'settings' | 'exercise1' | 'exercise2' | 'exercise3' | 'exercise4' | 'exercise5',

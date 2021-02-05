@@ -1,25 +1,38 @@
 import {createSlice, Draft, PayloadAction} from '@reduxjs/toolkit';
 
+import {initialState, saveState} from './persistent-state';
+
 export interface IExerciseState {
   points: number;
+  solvedQuestions: number[];
 }
-export type TaskNumber = 1 | 2 | 3 | 4 | 5;
-export type IInitialState = Record<TaskNumber, IExerciseState>;
-
-export const initialState: IInitialState = {
-  1: {points: 0},
-  2: {points: 0},
-  3: {points: 0},
-  4: {points: 0},
-  5: {points: 0},
-};
+export type ExerciseNumber = 1 | 2 | 3 | 4 | 5;
+export interface IInitialState {
+  date: number;
+  byNumber: Record<ExerciseNumber, IExerciseState>;
+}
 
 const exercisesSlice = createSlice({
   name: 'EXERCISES',
   initialState,
   reducers: {
-    incrementPoints: (state: Draft<IInitialState>, action: PayloadAction<{task: TaskNumber}>) => {
-      state[action.payload.task].points += 1;
+    overrideState: (state: Draft<IInitialState>, action: PayloadAction<IInitialState>) => action.payload,
+    incrementPoints: (
+      state: Draft<IInitialState>,
+      action: PayloadAction<{task: ExerciseNumber; solvedByQuestionId: number}>
+    ) => {
+      const {task, solvedByQuestionId} = action.payload;
+      state.byNumber[task].points += 1;
+      state.byNumber[task].solvedQuestions.push(solvedByQuestionId);
+      saveState(state);
+    },
+    addQuestionToSolvedPool: (
+      state: Draft<IInitialState>,
+      action: PayloadAction<{task: ExerciseNumber; solvedByQuestionId: number}>
+    ) => {
+      const {task, solvedByQuestionId} = action.payload;
+      state.byNumber[task].solvedQuestions.push(solvedByQuestionId);
+      saveState(state);
     },
   },
 });

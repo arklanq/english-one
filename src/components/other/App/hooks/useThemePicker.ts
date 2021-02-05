@@ -6,8 +6,7 @@ import lightTheme from '@/assets/theme/light';
 import {ITheme} from '@/models/theme/ITheme';
 import {selectColorSchemeInfo} from '@/redux-store/features/appearance/selectors';
 import {ColorScheme, IColorSchemeInfo} from '@/redux-store/features/appearance/slice';
-
-import createTheme, {IThemePrototype} from '../../../theme/createTheme';
+import createTheme, {IThemePrototype} from '@/theme/createTheme';
 
 export default function useThemePicker(): ITheme {
   const {system: systemColor, userPreference: userColor}: IColorSchemeInfo = useSelector(selectColorSchemeInfo);

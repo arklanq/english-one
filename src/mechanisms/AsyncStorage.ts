@@ -5,11 +5,7 @@ class AsyncStorage {
   public readonly prefix: string;
 
   constructor() {
-    const appSlug = Constants.manifest.slug
-      ? Constants.manifest.slug.toLowerCase()
-      : Constants.manifest.name
-      ? Constants.manifest.name.toLowerCase()
-      : 'unknown-expo-app';
+    const appSlug = Constants.manifest.slug?.toLowerCase() ?? Constants.manifest.name ?? 'unknown-expo-app';
     this.prefix = `@${appSlug}:`;
   }
 

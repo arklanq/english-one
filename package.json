@@ -4,12 +4,13 @@
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "scripts": {
-    "start": "expo start",
-    "start-clean": "expo start -c",
-    "start-android": "expo start --android",
+    "start": "cross-env REACT_DEBUGGER=\"rndebugger-open --open --port 19000\" expo start",
+    "start-clean": "cross-env REACT_DEBUGGER=\"rndebugger-open --open --port 19000\" expo start -c",
+    "start-android": "cross-env REACT_DEBUGGER=\"rndebugger-open --open --port 19000\" expo start --android",
     "typescript": "tsc --noEmit",
     "lint": "eslint '**/*.{ts,tsx}' --quiet --fix",
-    "format": "prettier --write '**/*.{ts,tsx}'"
+    "format": "prettier --write '**/*.{ts,tsx}'",
+    "postinstall": "rndebugger-open"
   },
   "husky": {
     "hooks": {
@@ -29,6 +30,7 @@
     ]
   },
   "dependencies": {
+    "@expo/metro-config": "^0.1.54",
     "@expo/vector-icons": "^12.0.0",
     "@idkman/react-native-styles": "*",
     "@react-native-async-storage/async-storage": "^1.13.3",
@@ -40,12 +42,16 @@
     "axios": "^0.21.1",
     "color": "^3.1.3",
     "expo": "~40.0.0",
+    "expo-asset": "~8.2.1",
     "expo-constants": "~9.3.5",
+    "expo-file-system": "~9.3.0",
     "expo-font": "~8.4.0",
     "expo-network": "~2.4.0",
     "expo-splash-screen": "^0.9.0",
+    "expo-sqlite": "~8.5.0",
     "expo-status-bar": "~1.0.3",
     "expo-updates": "~0.4.1",
+    "formik": "^2.2.6",
     "lodash": "^4.17.20",
     "react": "16.13.1",
     "react-dom": "16.13.1",
@@ -73,10 +79,12 @@
     "@types/react": "~16.9.35",
     "@types/react-dom": "~16.9.8",
     "@types/react-native": "0.63.40",
+    "@types/react-native-snap-carousel": "^3.8.2",
     "@types/react-redux": "^7.1.15",
     "@types/yup": "^0.29.11",
     "@typescript-eslint/eslint-plugin": "^4.11.1",
     "@typescript-eslint/parser": "^4.11.1",
+    "cross-env": "^7.0.3",
     "eslint": "^7.16.0",
     "eslint-config-universe": "^6.0.1",
     "eslint-plugin-import": "^2.22.1",
@@ -84,6 +92,7 @@
     "husky": "^4.3.6",
     "lint-staged": "^10.5.3",
     "prettier": "^2.2.1",
+    "react-native-debugger-open": "^0.3.25",
     "typescript": "~4.0.0"
   }
 }

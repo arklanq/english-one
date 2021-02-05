@@ -22,6 +22,7 @@
       "@/assets/*": ["./assets/*"],
       "@/components/*": ["./components/*"],
       "@/contexts/*": ["./contexts/*"],
+      "@/database/*": ["./database/*"],
       "@/exceptions/*": ["./exceptions/*"],
       "@/graphql/*": ["./graphql/*"],
       "@/hooks/*": ["./hooks/*"],

@@ -3,7 +3,7 @@ import {AppState, AppStateStatus} from 'react-native';
 import {useDispatch} from 'react-redux';
 
 import appSlice from '@/redux-store/features/app/slice';
-import {DispatchType} from '@/redux-store/types';
+import {DispatchType} from '@/redux-store/models';
 
 export default function useAppStateController() {
   const dispatch: DispatchType = useDispatch();
