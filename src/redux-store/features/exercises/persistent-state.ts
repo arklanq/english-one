@@ -2,6 +2,7 @@ import {array, number, object} from 'yup';
 
 import AsyncStorage from '@/mechanisms/AsyncStorage';
 import ErrorReporting from '@/mechanisms/ErrorReporting';
+import {doesCalendarDayDiffer} from '@/utils/dates-utils';
 import {validateSync} from '@/utils/yup-utils';
 
 import {IInitialState} from './slice';
@@ -35,7 +36,6 @@ const stateValidation = object()
       5: exerciseValidation,
     }),
   });
-const ONE_DAY_DIFF = 24 * 60 * 60 * 1000;
 
 export async function saveState(state: IInitialState): Promise<void> {
   await AsyncStorage.setJsonItem(STORAGE_KEY, state);
@@ -65,8 +65,7 @@ export async function loadState(): Promise<IInitialState> {
     return initialState;
   }
 
-  const currentDate = new Date().getTime();
-  if (currentDate - data.date > ONE_DAY_DIFF) return initialState;
+  if (doesCalendarDayDiffer(new Date(), new Date(data.date))) return initialState;
 
   return data;
 }
