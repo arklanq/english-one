@@ -11,11 +11,11 @@ const QUERY_TASKS_LIMIT = 3;
 
 export default async function queryTasks(
   db: WebSQLDatabase,
-  poolTasks: number[],
+  actualTasks: number[],
   solvedTasks: number[],
   skippedTasks: number[]
 ): Promise<IGuessImageTask[]> {
-  const excludedIds = Array.from(new Set(poolTasks.concat(solvedTasks, skippedTasks)).values());
+  const excludedIds = Array.from(new Set(actualTasks.concat(solvedTasks, skippedTasks)).values());
   const images: IImage[] = await queryImages(db, QUERY_TASKS_LIMIT, excludedIds);
   const answers: IAnswer[] = await queryImagesAnswers(
     db,
