@@ -1,4 +1,4 @@
-import {makeStyles, useTheme} from '@idkman/react-native-styles';
+import {useTheme} from '@idkman/react-native-styles';
 import {FormikProps} from 'formik';
 import React, {Dispatch, memo, useMemo, useRef} from 'react';
 import {FlatList, View} from 'react-native';
@@ -7,14 +7,12 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import Typography from '@/components/atoms/Typography';
 import DailyQuestionsPassed from '@/components/organisms/DailyQuestionsPassed';
-import {IMAGE_CARD_SPACING} from '@/components/organisms/ImageCard';
 import ImagesCarousel from '@/components/organisms/ImagesCarousel';
 import QuestionsPoolExhausted from '@/components/organisms/QuestionsPoolExhausted';
 import SimpleAnswerForm, {IAnswerValues} from '@/components/organisms/SimpleAnswerForm';
 import {ScreenNavigationProp} from '@/components/other/Router';
 import IImage from '@/models/IImage';
 import {ITheme} from '@/models/theme/ITheme';
-import {fontName} from '@/redux-store/features/app/fonts';
 import {selectExercisePoints} from '@/redux-store/features/exercises/selectors';
 import {DispatchType} from '@/redux-store/models';
 
@@ -24,32 +22,13 @@ import useCongratsInfoDismissHandler from './hooks/useCongratsInfoDismissHandler
 import useLocalState, {Action, ILocalState} from './hooks/useLocalState';
 import useQuestionSkipHandler from './hooks/useQuestionSkipHandler';
 import useQuestionsPopulator from './hooks/useQuestionsPopulator';
+import useStyles from './hooks/useStyles';
 import useSubmitHandler from './hooks/useSubmitHandler';
-import ISimpleQuestion from './models/ISimpleQuestion';
+import IGuessImageTask from './models/IGuessImageTask';
 
 export interface IExercise2Props {
   navigation: ScreenNavigationProp<'exercise2'>;
 }
-
-const useStyles = makeStyles((theme: ITheme) => ({
-  root: {
-    flex: 1,
-    backgroundColor: theme.palette.background.default,
-    alignItems: 'center',
-    justifyContent: 'center',
-    paddingVertical: 24,
-  },
-  spinnerWrapper: {
-    flex: 1,
-    justifyContent: 'center',
-  },
-  title: {
-    alignSelf: 'flex-start',
-    textAlign: 'left',
-    marginLeft: IMAGE_CARD_SPACING,
-    fontFamily: fontName['BowlbyOneSC-Regular'],
-  },
-}));
 
 function Exercise2(props: IExercise2Props) {
   const {navigation} = props;
@@ -63,20 +42,20 @@ function Exercise2(props: IExercise2Props) {
   const reduxDispatch: DispatchType = useDispatch();
   // local-state
   const [state, dispatch]: [ILocalState, Dispatch<Action>] = useLocalState();
-  const {questions, activeQuestionIndex, poolExhausted, userInteraction} = state;
-  const images: IImage[] = useMemo(() => questions.map((question: ISimpleQuestion) => question.image), [questions]);
+  const {tasks, activeTaskIndex, poolExhausted, userInteraction} = state;
+  const images: IImage[] = useMemo(() => tasks.map((tasks: IGuessImageTask) => tasks.image), [tasks]);
   // handlers
   const handleSkipQuestion = useQuestionSkipHandler(state, dispatch, formikRef, points);
-  const handleSubmitAnswer = useSubmitHandler(state, reduxDispatch, points, handleSkipQuestion);
+  const handleSubmitAnswer = useSubmitHandler(state, dispatch, reduxDispatch, formikRef, points);
   const handleCarouselEndReach = useCarouselEndReachHandler(dispatch);
   const handleDismissCongratsInfo = useCongratsInfoDismissHandler(dispatch);
   // controllers
   useQuestionsPopulator(state, dispatch);
-  useActiveQuestionIndexController(activeQuestionIndex, carouselRef);
+  useActiveQuestionIndexController(activeTaskIndex, carouselRef);
   // calculations
   const shouldShowCongratsInfo = points === 10 && !userInteraction.dismissedCongratsScreen;
-  const shouldShowThatsAllInfo = poolExhausted && activeQuestionIndex === questions.length;
-  const shouldShowSpinner = questions.length === 0;
+  const shouldShowThatsAllInfo = poolExhausted && activeTaskIndex === tasks.length;
+  const shouldShowSpinner = tasks.length === 0;
 
   return (
     <View style={stylesheet.root}>
@@ -97,7 +76,7 @@ function Exercise2(props: IExercise2Props) {
             ref={carouselRef}
             images={images}
             onEndReached={handleCarouselEndReach}
-            activeQuestionIndex={activeQuestionIndex}
+            activeTaskIndex={activeTaskIndex}
           />
           <SimpleAnswerForm ref={formikRef} handleSkip={handleSkipQuestion} handleSubmit={handleSubmitAnswer} />
         </>

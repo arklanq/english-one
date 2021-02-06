@@ -2,28 +2,31 @@ import {useReducer} from 'react';
 
 import IPayloadAction from '@/models/IPayloadAction';
 
-import ISimpleQuestion from '../models/ISimpleQuestion';
+import IGuessImageTask from '../models/IGuessImageTask';
 
 export interface IUserInteractions {
   dismissedCongratsScreen: boolean;
 }
 export interface ILocalState {
-  questions: ISimpleQuestion[];
-  activeQuestionIndex: number;
+  tasks: IGuessImageTask[];
+  activeTaskIndex: number;
+  skippedTasks: number[];
   endReached: boolean;
   poolExhausted: boolean;
   userInteraction: IUserInteractions;
 }
 export type Action =
-  | IPayloadAction<'setActiveQuestionIndex', number>
+  | IPayloadAction<'skipTask', {index: number; skippedTaskId: number}>
+  | IPayloadAction<'submitTask', {index: number}>
   | IPayloadAction<'setEndReached', boolean>
   | IPayloadAction<'setPoolExhausted', boolean>
-  | IPayloadAction<'pushNewQuestions', ISimpleQuestion[]>
+  | IPayloadAction<'pushNewQuestions', IGuessImageTask[]>
   | IPayloadAction<'updateUserInteractions', Partial<IUserInteractions>>;
 
 const defaultState: ILocalState = {
-  questions: [],
-  activeQuestionIndex: 0,
+  tasks: [],
+  activeTaskIndex: 0,
+  skippedTasks: [],
   endReached: true,
   poolExhausted: false,
   userInteraction: {
@@ -33,10 +36,16 @@ const defaultState: ILocalState = {
 
 function reducer(state: ILocalState, action: Action): ILocalState {
   switch (action.type) {
-    case 'setActiveQuestionIndex':
+    case 'skipTask':
       return {
         ...state,
-        activeQuestionIndex: action.payload,
+        activeTaskIndex: action.payload.index + 1,
+        skippedTasks: [...state.skippedTasks, action.payload.skippedTaskId],
+      };
+    case 'submitTask':
+      return {
+        ...state,
+        activeTaskIndex: action.payload.index + 1,
       };
     case 'setEndReached':
       return {
@@ -51,7 +60,7 @@ function reducer(state: ILocalState, action: Action): ILocalState {
     case 'pushNewQuestions':
       return {
         ...state,
-        questions: state.questions.slice().concat(action.payload),
+        tasks: state.tasks.slice().concat(action.payload),
         endReached: false,
       };
     case 'updateUserInteractions':

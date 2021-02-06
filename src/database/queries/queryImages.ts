@@ -7,12 +7,10 @@ import CorruptedDatabaseException from '@/exceptions/CorruptedDatabaseException'
 import IImage from '@/models/IImage';
 import {getValidationErrorMessage, validateSync} from '@/utils/yup-utils';
 
-function prepareSqlStatement(alreadySolvedQuestions: number[]) {
-  return `SELECT id, image_url as imageUrl FROM ex2__images WHERE id > ? AND id NOT IN (${new Array(
-    alreadySolvedQuestions.length
-  )
+function prepareSqlStatement(excludedIds: number[]) {
+  return `SELECT id, image_url as imageUrl FROM ex2__images WHERE id NOT IN (${new Array(excludedIds.length)
     .fill('?')
-    .join(', ')}) LIMIT ?;`;
+    .join(', ')}) ORDER BY RANDOM() LIMIT ?;`;
 }
 
 const validationSchema = object().required().camelCase().shape({
@@ -23,12 +21,11 @@ const validationSchema = object().required().camelCase().shape({
 export default async function queryImages(
   db: WebSQLDatabase,
   limit: number = 3,
-  offset: number = 0,
-  alreadySolvedQuestions: number[] = []
+  excludedIds: number[] = []
 ): Promise<IImage[]> {
   const results: SQLResultSet = await queryDatabase(db, {
-    sqlStatement: prepareSqlStatement(alreadySolvedQuestions),
-    args: [offset, ...alreadySolvedQuestions, limit],
+    sqlStatement: prepareSqlStatement(excludedIds),
+    args: [...excludedIds, limit],
   });
 
   const images: IImage[] = [];

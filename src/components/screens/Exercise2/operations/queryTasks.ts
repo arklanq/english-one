@@ -5,28 +5,30 @@ import queryImagesAnswers from '@/database/queries/queryImagesAnswers';
 import IAnswer from '@/models/IAnswer';
 import IImage from '@/models/IImage';
 
-import ISimpleQuestion from '../models/ISimpleQuestion';
+import IGuessImageTask from '../models/IGuessImageTask';
 
-const QUERY_QUESTIONS_LIMIT = 3;
+const QUERY_TASKS_LIMIT = 3;
 
-export default async function queryQuestions(
+export default async function queryTasks(
   db: WebSQLDatabase,
-  lastQuestionId: number,
-  alreadySolvedQuestions: number[]
-): Promise<ISimpleQuestion[]> {
-  const images: IImage[] = await queryImages(db, QUERY_QUESTIONS_LIMIT, lastQuestionId, alreadySolvedQuestions);
+  poolTasks: number[],
+  solvedTasks: number[],
+  skippedTasks: number[]
+): Promise<IGuessImageTask[]> {
+  const excludedIds = Array.from(new Set(poolTasks.concat(solvedTasks, skippedTasks)).values());
+  const images: IImage[] = await queryImages(db, QUERY_TASKS_LIMIT, excludedIds);
   const answers: IAnswer[] = await queryImagesAnswers(
     db,
     images.map((image: IImage) => image.id)
   );
-  const simpleQuestions: ISimpleQuestion[] = [];
+  const tasks: IGuessImageTask[] = [];
 
   for (const image of images) {
-    simpleQuestions.push({
+    tasks.push({
       image,
       answers: answers.filter((answer: IAnswer) => answer.questionId === image.id),
     });
   }
 
-  return simpleQuestions;
+  return tasks;
 }

@@ -8,25 +8,28 @@ import useSQLite from '@/hooks/useSQLite';
 import ErrorReporting from '@/mechanisms/ErrorReporting';
 import {selectExerciseSolvedQuestions} from '@/redux-store/features/exercises/selectors';
 
-import findLastQuestionId from '../misc/findLastQuestionId';
-import ISimpleQuestion from '../models/ISimpleQuestion';
-import queryQuestions from '../operations/queryQuestions';
+import IGuessImageTask from '../models/IGuessImageTask';
+import queryTasks from '../operations/queryTasks';
 import {Action, ILocalState} from './useLocalState';
 
 export default function useQuestionsPopulator(state: ILocalState, dispatch: Dispatch<Action>): void {
-  const {questions, endReached, poolExhausted} = state;
-  const alreadySolvedQuestions = useSelector(selectExerciseSolvedQuestions(2));
+  const {tasks, endReached, poolExhausted, skippedTasks} = state;
+  const solvedTasks = useSelector(selectExerciseSolvedQuestions(2));
   const isMounted: () => boolean = useIsMounted();
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
   const prevStatus = usePrevious(status);
   const db: WebSQLDatabase = useSQLite();
-  const shouldLoad: boolean = (endReached && !poolExhausted) || questions.length === 0;
+  const shouldLoad: boolean = (endReached && !poolExhausted) || tasks.length === 0;
   const prevShouldLoad: boolean | undefined = usePrevious(shouldLoad);
 
   const runAsyncAction = useCallback(async () => {
     try {
-      const lastQuestionId = findLastQuestionId(questions);
-      const newQuestions: ISimpleQuestion[] = await queryQuestions(db, lastQuestionId, alreadySolvedQuestions);
+      const newQuestions: IGuessImageTask[] = await queryTasks(
+        db,
+        tasks.map((task) => task.image.id),
+        solvedTasks,
+        skippedTasks
+      );
       if (isMounted()) {
         if (newQuestions.length > 0) dispatch({type: 'pushNewQuestions', payload: newQuestions});
         else dispatch({type: 'setPoolExhausted', payload: true});
@@ -35,7 +38,7 @@ export default function useQuestionsPopulator(state: ILocalState, dispatch: Disp
       ErrorReporting.captureError(e);
       if (isMounted()) setStatus('error');
     }
-  }, [db, questions, setStatus, dispatch]);
+  }, [db, tasks, setStatus, dispatch]);
 
   useEffect(() => {
     if (status === 'idle' && !prevShouldLoad && shouldLoad) setStatus('loading');

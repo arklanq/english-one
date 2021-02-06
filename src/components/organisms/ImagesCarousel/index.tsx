@@ -8,7 +8,7 @@ import IImage from '@/models/IImage';
 export interface IImagesCarouselProps {
   images: IImage[];
   onEndReached?: (info: {distanceFromEnd: number}) => unknown;
-  activeQuestionIndex: number;
+  activeTaskIndex: number;
 }
 
 const useStyles = makeStyles(() => ({
@@ -22,7 +22,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 const ImagesCarousel = forwardRef((props: IImagesCarouselProps, ref: ForwardedRef<FlatList<IImage> | null>) => {
-  const {images, onEndReached, activeQuestionIndex} = props;
+  const {images, onEndReached, activeTaskIndex} = props;
   const stylesheet = useStyles();
   const listRef: MutableRefObject<FlatList<IImage> | null> = useRef(null);
 
@@ -42,7 +42,7 @@ const ImagesCarousel = forwardRef((props: IImagesCarouselProps, ref: ForwardedRe
       data={images}
       keyExtractor={(image: IImage) => image.id.toString()}
       initialNumToRender={3}
-      initialScrollIndex={activeQuestionIndex}
+      initialScrollIndex={activeTaskIndex}
       getItemLayout={(data, index) => ({length: IMAGE_CARD_FULL_WIDTH, offset: IMAGE_CARD_FULL_WIDTH * index, index})}
       renderItem={handleRenderItem}
       style={stylesheet.root}

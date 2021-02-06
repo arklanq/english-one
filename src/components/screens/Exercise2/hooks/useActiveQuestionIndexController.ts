@@ -5,16 +5,16 @@ import usePrevious from '@/hooks/usePrevious';
 import IImage from '@/models/IImage';
 
 export default function useActiveQuestionIndexController(
-  activeQuestionIndex: number,
+  activeTaskIndex: number,
   carouselRef: MutableRefObject<FlatList<IImage> | null>
 ) {
-  const prevActiveQuestionIndex = usePrevious(activeQuestionIndex);
+  const prevActiveQuestionIndex = usePrevious(activeTaskIndex);
 
   useEffect(() => {
-    if (prevActiveQuestionIndex !== activeQuestionIndex)
+    if (prevActiveQuestionIndex !== activeTaskIndex)
       carouselRef.current?.scrollToIndex({
-        index: activeQuestionIndex,
+        index: activeTaskIndex,
         animated: true,
       });
-  }, [prevActiveQuestionIndex, activeQuestionIndex, carouselRef]);
+  }, [prevActiveQuestionIndex, activeTaskIndex, carouselRef]);
 }

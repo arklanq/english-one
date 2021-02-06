@@ -2,6 +2,7 @@ import {FormikProps} from 'formik';
 import {Dispatch, MutableRefObject, useCallback} from 'react';
 
 import {IAnswerValues} from '@/components/organisms/SimpleAnswerForm';
+import IGuessImageTask from '@/components/screens/Exercise2/models/IGuessImageTask';
 
 import {Action, ILocalState} from './useLocalState';
 
@@ -12,12 +13,14 @@ export default function useQuestionSkipHandler(
   points: number
 ) {
   return useCallback(() => {
-    const {questions, activeQuestionIndex, userInteraction} = state;
+    const {tasks, activeTaskIndex, userInteraction} = state;
+    const task: IGuessImageTask = tasks[activeTaskIndex];
     const shouldShowCongratsInfo = points + 1 === 10 && !userInteraction.dismissedCongratsScreen;
 
-    if (activeQuestionIndex < questions.length) {
+    if (activeTaskIndex < tasks.length) {
       if (!shouldShowCongratsInfo) formikRef.current?.resetForm({});
-      dispatch({type: 'setActiveQuestionIndex', payload: activeQuestionIndex + 1});
+
+      dispatch({type: 'skipTask', payload: {index: activeTaskIndex, skippedTaskId: task.image.id}});
     }
-  }, [formikRef, state, dispatch, points]);
+  }, [state, dispatch, formikRef, points]);
 }
