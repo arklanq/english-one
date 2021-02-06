@@ -8,13 +8,13 @@ import useSQLite from '@/hooks/useSQLite';
 import ErrorReporting from '@/mechanisms/ErrorReporting';
 import {selectExerciseSolvedQuestions} from '@/redux-store/features/exercises/selectors';
 
-import IGuessImageTask from '../models/IGuessImageTask';
+import ITranslateWordTask from '../models/ITranslateWordTask';
 import queryTasks from '../operations/queryTasks';
 import {Action, ILocalState} from './useLocalState';
 
 export default function useQuestionsPopulator(state: ILocalState, dispatch: Dispatch<Action>): void {
   const {tasks, endReached, poolExhausted, skippedTasks} = state;
-  const solvedTasks = useSelector(selectExerciseSolvedQuestions(2));
+  const solvedTasks = useSelector(selectExerciseSolvedQuestions(4));
   const isMounted: () => boolean = useIsMounted();
   const [status, setStatus] = useState<'idle' | 'loading' | 'error'>('idle');
   const prevStatus = usePrevious(status);
@@ -24,9 +24,9 @@ export default function useQuestionsPopulator(state: ILocalState, dispatch: Disp
 
   const runAsyncAction = useCallback(async () => {
     try {
-      const newQuestions: IGuessImageTask[] = await queryTasks(
+      const newQuestions: ITranslateWordTask[] = await queryTasks(
         db,
-        tasks.map((task) => task.image.id),
+        tasks.map((task) => task.question.id),
         solvedTasks,
         skippedTasks
       );

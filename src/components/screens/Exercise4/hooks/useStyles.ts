@@ -1,6 +1,6 @@
 import {makeStyles} from '@idkman/react-native-styles';
 
-import {IMAGE_CARD_SPACING} from '@/components/organisms/ImageCard';
+import {IMAGE_CARD_SPACING} from '@/components/molecules/ImageCard';
 import {ITheme} from '@/models/theme/ITheme';
 import {fontName} from '@/redux-store/features/app/fonts';
 

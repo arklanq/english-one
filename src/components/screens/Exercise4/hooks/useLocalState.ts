@@ -2,13 +2,13 @@ import {useReducer} from 'react';
 
 import IPayloadAction from '@/models/IPayloadAction';
 
-import IGuessImageTask from '../models/IGuessImageTask';
+import ITranslateWordTask from '../models/ITranslateWordTask';
 
 export interface IUserInteractions {
   dismissedCongratsScreen: boolean;
 }
 export interface ILocalState {
-  tasks: IGuessImageTask[];
+  tasks: ITranslateWordTask[];
   activeTaskIndex: number;
   skippedTasks: number[];
   endReached: boolean;
@@ -20,7 +20,7 @@ export type Action =
   | IPayloadAction<'submitTask', {index: number}>
   | IPayloadAction<'setEndReached', boolean>
   | IPayloadAction<'setPoolExhausted', boolean>
-  | IPayloadAction<'pushNewTasks', IGuessImageTask[]>
+  | IPayloadAction<'pushNewTasks', ITranslateWordTask[]>
   | IPayloadAction<'updateUserInteractions', Partial<IUserInteractions>>;
 
 const defaultState: ILocalState = {

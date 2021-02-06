@@ -1,7 +1,7 @@
 import {WebSQLDatabase} from 'expo-sqlite';
 
 import queryEnglishWords from '@/database/queries/queryEnglishWords';
-import queryImagesAnswers from '@/database/queries/queryImagesAnswers';
+import queryEnglishWordsAnswers from '@/database/queries/queryEnglishWordsAnswers';
 import IAnswer from '@/models/IAnswer';
 import IQuestion from '@/models/IQuestion';
 
@@ -11,13 +11,13 @@ const QUERY_TASKS_LIMIT = 3;
 
 export default async function queryTasks(
   db: WebSQLDatabase,
-  actualTasks: string[],
-  solvedTasks: string[],
-  skippedTasks: string[]
+  actualTasks: number[],
+  solvedTasks: number[],
+  skippedTasks: number[]
 ): Promise<ITranslateWordTask[]> {
   const excludedIds = Array.from(new Set(actualTasks.concat(solvedTasks, skippedTasks)).values());
   const questions: IQuestion[] = await queryEnglishWords(db, QUERY_TASKS_LIMIT, excludedIds);
-  const answers: IAnswer[] = await queryImagesAnswers(
+  const answers: IAnswer[] = await queryEnglishWordsAnswers(
     db,
     questions.map((question: IQuestion) => question.id)
   );

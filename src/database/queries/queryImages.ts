@@ -8,9 +8,12 @@ import IImage from '@/models/IImage';
 import {getValidationErrorMessage, validateSync} from '@/utils/yup-utils';
 
 function prepareSqlStatement(excludedIds: number[]) {
-  return `SELECT id, image_url as imageUrl FROM ex2__images WHERE id NOT IN (${new Array(excludedIds.length)
-    .fill('?')
-    .join(', ')}) ORDER BY RANDOM() LIMIT ?;`;
+  return `
+    SELECT id, image_url as imageUrl 
+    FROM ex2__images 
+    WHERE id NOT IN (${new Array(excludedIds.length).fill('?').join(', ')}) 
+    ORDER BY RANDOM() 
+    LIMIT ?;`;
 }
 
 const validationSchema = object().required().camelCase().shape({

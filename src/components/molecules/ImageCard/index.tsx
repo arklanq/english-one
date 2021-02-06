@@ -3,6 +3,8 @@ import React, {memo} from 'react';
 import {Dimensions, ImageStyle, View} from 'react-native';
 import {Card} from 'react-native-paper';
 
+import {ITheme} from '@/models/theme/ITheme';
+
 export interface IImageCardProps {
   imgURL: string;
 }
@@ -13,14 +15,17 @@ export const IMAGE_CARD_WIDTH = WINDOW_WIDTH * ELEMENT_WIDTH_MULTIPLIER;
 export const IMAGE_CARD_SPACING = (WINDOW_WIDTH * (1 - ELEMENT_WIDTH_MULTIPLIER)) / 2;
 export const IMAGE_CARD_FULL_WIDTH = IMAGE_CARD_WIDTH + 2 * IMAGE_CARD_SPACING;
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme: ITheme) => ({
   container: {
     width: IMAGE_CARD_WIDTH,
     marginHorizontal: IMAGE_CARD_SPACING,
+    overflow: 'visible',
   },
   card: {
     width: '100%',
     marginBottom: 48,
+    borderRadius: theme.shape.borderRadius,
+    ...theme.shadow[12],
   },
   cover: {
     width: '100%',
