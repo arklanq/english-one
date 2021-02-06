@@ -4,43 +4,35 @@ import {number, object, string} from 'yup';
 
 import queryDatabase from '@/database/methods/queryDatabase';
 import CorruptedDatabaseException from '@/exceptions/CorruptedDatabaseException';
-import IImage from '@/models/IImage';
+import IDialogue from '@/models/IDialogue';
 import {getValidationErrorMessage, validateSync} from '@/utils/yup-utils';
 
 function prepareSqlStatement(excludedIds: number[]) {
   return `
-    SELECT id, image_url as imageUrl 
-    FROM ex3__images 
+    SELECT id, dialogue_id as dialogueId, sequence, value as question 
+    FROM ex2__questions
     WHERE id NOT IN (${new Array(excludedIds.length).fill('?').join(', ')}) 
     ORDER BY RANDOM() 
-    LIMIT ?;`;
+    LIMIT 1;`;
 }
 
 const validationSchema = object().required().camelCase().shape({
   id: number().required().positive().integer(),
-  imageUrl: string().required(),
+  title: string().required(),
+  introduction: string().required(),
 });
 
-export default async function queryImages(
-  db: WebSQLDatabase,
-  limit: number = 3,
-  excludedIds: number[] = []
-): Promise<IImage[]> {
+export default async function queryDialogues(db: WebSQLDatabase, excludedIds: number[] = []): Promise<IDialogue> {
   const results: SQLResultSet = await queryDatabase(db, {
     sqlStatement: prepareSqlStatement(excludedIds),
-    args: [...excludedIds, limit],
+    args: [...excludedIds],
   });
 
-  const images: IImage[] = [];
-  for (let i = 0; i < results.rows.length; i++) {
-    const item: IImage | unknown = results.rows.item(i);
-    try {
-      validateSync<IImage>(validationSchema, item);
-      images.push(item);
-    } catch (e: unknown) {
-      throw new CorruptedDatabaseException("Couldn't fetch `images` query results: " + getValidationErrorMessage(e));
-    }
+  const item: IDialogue | unknown = results.rows.item(0);
+  try {
+    validateSync<IDialogue>(validationSchema, item);
+    return item;
+  } catch (e: unknown) {
+    throw new CorruptedDatabaseException("Couldn't fetch `dialogues` query results: " + getValidationErrorMessage(e));
   }
-
-  return images;
 }

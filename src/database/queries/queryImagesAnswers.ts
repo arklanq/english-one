@@ -11,7 +11,7 @@ import {getValidationErrorMessage, validateSync} from '@/utils/yup-utils';
 function prepareSqlStatement(imagesIdsCount: number) {
   return `
     SELECT ANSWERS.image_id as questionId, ENG.id AS id, ENG.word AS value
-    FROM ex2__answers AS ANSWERS
+    FROM ex3__answers AS ANSWERS
     INNER JOIN english_words as ENG ON ENG.id = ANSWERS.en_word_id
     WHERE ANSWERS.image_id IN (${new Array(imagesIdsCount).fill('?').join(', ')})
   `;
