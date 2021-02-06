@@ -2,7 +2,7 @@ import {makeStyles} from '@idkman/react-native-styles';
 import React, {ForwardedRef, forwardRef, memo, MutableRefObject, useCallback, useEffect, useRef} from 'react';
 import {FlatList, ListRenderItemInfo} from 'react-native';
 
-import ImageCard, {IMAGE_CARD_FULL_WIDTH} from '@/components/organisms/ImageCard';
+import ImageCard, {IMAGE_CARD_FULL_WIDTH} from '@/components/molecules/ImageCard';
 import IImage from '@/models/IImage';
 
 export interface IImagesCarouselProps {
