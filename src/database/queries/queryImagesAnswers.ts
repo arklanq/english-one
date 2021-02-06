@@ -8,13 +8,12 @@ import IAnswer from '@/models/IAnswer';
 import IImage from '@/models/IImage';
 import {getValidationErrorMessage, validateSync} from '@/utils/yup-utils';
 
-function prepareSqlStatement(variablesLength: number) {
+function prepareSqlStatement(imagesIdsCount: number) {
   return `
-    SELECT id, lookup.image_id as questionId, en_word as value
-    FROM words
-    INNER JOIN ex2__lookup lookup on words.id = lookup.word_id
-    WHERE lookup.image_id IN (${new Array(variablesLength).fill('?').join(', ')}) AND id=lookup.word_id
-    GROUP BY en_word;
+    SELECT ANSWERS.image_id as questionId, ENG.id AS id, ENG.word AS value
+    FROM ex2__answers AS ANSWERS
+    INNER JOIN english_words as ENG ON ENG.id = ANSWERS.en_word_id
+    WHERE ANSWERS.image_id IN (${new Array(imagesIdsCount).fill('?').join(', ')})
   `;
 }
 const validationSchema = object().required().camelCase().shape({
