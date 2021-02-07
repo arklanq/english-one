@@ -10,9 +10,8 @@ export interface IImageCardProps {
 }
 
 const WINDOW_WIDTH = Dimensions.get('window').width;
-const ELEMENT_WIDTH_MULTIPLIER = 0.8;
-export const IMAGE_CARD_WIDTH = WINDOW_WIDTH * ELEMENT_WIDTH_MULTIPLIER;
-export const IMAGE_CARD_SPACING = (WINDOW_WIDTH * (1 - ELEMENT_WIDTH_MULTIPLIER)) / 2;
+export const IMAGE_CARD_SPACING = 24;
+export const IMAGE_CARD_WIDTH = WINDOW_WIDTH - 2 * IMAGE_CARD_SPACING;
 export const IMAGE_CARD_FULL_WIDTH = IMAGE_CARD_WIDTH + 2 * IMAGE_CARD_SPACING;
 
 const useStyles = makeStyles((theme: ITheme) => ({

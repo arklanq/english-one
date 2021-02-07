@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme: ITheme) => ({
   cardWrapper: {
     flex: 1,
     marginVertical: 16,
-    marginHorizontal: IMAGE_CARD_SPACING - 8,
+    marginHorizontal: IMAGE_CARD_SPACING,
   },
   card: {
     ...theme.shadow[4],
