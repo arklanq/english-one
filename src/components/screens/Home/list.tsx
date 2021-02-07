@@ -4,15 +4,7 @@ import {View} from 'react-native';
 import {List} from 'react-native-paper';
 
 import {StackParamList} from '@/components/other/Router';
-
-export interface IListItemIconProps {
-  color: string;
-  style: {
-    marginLeft: number;
-    marginRight: number;
-    marginVertical?: number;
-  };
-}
+import IListItemIconProps from '@/models/IListItemIconProps';
 
 export interface IListItem {
   name: keyof StackParamList;

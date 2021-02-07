@@ -4,8 +4,7 @@ import {boolean, number, object, string} from 'yup';
 
 import queryDatabase from '@/database/methods/queryDatabase';
 import CorruptedDatabaseException from '@/exceptions/CorruptedDatabaseException';
-import IAnswer from '@/models/IAnswer';
-import IDialogAnswer from '@/models/IDialogAnswer';
+import IDialogueAnswer from '@/models/IDialogueAnswer';
 import {getValidationErrorMessage, validateSync} from '@/utils/yup-utils';
 
 function prepareSqlStatement(questionsCount: number) {
@@ -25,23 +24,26 @@ const validationSchema = object()
     isCorrect: boolean().required(),
     helperText: string().when('isCorrect', {
       is: true,
-      then: string().optional(),
+      then: string().nullable(),
       otherwise: string().required(),
     }),
   });
 
-export default async function queryDialogueAnswers(db: WebSQLDatabase, questionsIds: number[]): Promise<IAnswer[]> {
+export default async function queryDialogueAnswers(
+  db: WebSQLDatabase,
+  questionsIds: number[]
+): Promise<IDialogueAnswer[]> {
   const results: SQLResultSet = await queryDatabase(db, {
     sqlStatement: prepareSqlStatement(questionsIds.length),
     args: questionsIds,
   });
 
-  const answers: IDialogAnswer[] = [];
+  const answers: IDialogueAnswer[] = [];
   for (let i = 0; i < results.rows.length; i++) {
-    const item: IDialogAnswer | unknown = results.rows.item(i);
+    const item: IDialogueAnswer | unknown = results.rows.item(i);
     try {
       const castedItem = validationSchema.cast(item);
-      validateSync<IDialogAnswer>(validationSchema, castedItem);
+      validateSync<IDialogueAnswer>(validationSchema, castedItem);
       answers.push(castedItem);
     } catch (e: unknown) {
       throw new CorruptedDatabaseException(

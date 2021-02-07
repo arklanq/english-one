@@ -7,14 +7,12 @@ import CorruptedDatabaseException from '@/exceptions/CorruptedDatabaseException'
 import IDialogue from '@/models/IDialogue';
 import {getValidationErrorMessage, validateSync} from '@/utils/yup-utils';
 
-function prepareSqlStatement(excludedIds: number[]) {
-  return `
-    SELECT id, dialogue_id as dialogueId, sequence, value as question 
-    FROM ex2__questions
-    WHERE id NOT IN (${new Array(excludedIds.length).fill('?').join(', ')}) 
-    ORDER BY RANDOM() 
-    LIMIT 1;`;
-}
+const sqlStatement = `
+  SELECT id, title, introduction FROM ex2__dialogues
+  WHERE id=?
+  ORDER BY RANDOM() 
+  LIMIT 1;
+`;
 
 const validationSchema = object().required().camelCase().shape({
   id: number().required().positive().integer(),
@@ -22,11 +20,8 @@ const validationSchema = object().required().camelCase().shape({
   introduction: string().required(),
 });
 
-export default async function queryDialogues(db: WebSQLDatabase, excludedIds: number[] = []): Promise<IDialogue> {
-  const results: SQLResultSet = await queryDatabase(db, {
-    sqlStatement: prepareSqlStatement(excludedIds),
-    args: [...excludedIds],
-  });
+export default async function queryDialogue(db: WebSQLDatabase, dialogueId: number): Promise<IDialogue> {
+  const results: SQLResultSet = await queryDatabase(db, {sqlStatement, args: [dialogueId]});
 
   const item: IDialogue | unknown = results.rows.item(0);
   try {

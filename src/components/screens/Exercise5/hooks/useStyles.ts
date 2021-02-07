@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: ITheme) => ({
     flex: 1,
     justifyContent: 'center',
   },
-  title: {
+  points: {
     alignSelf: 'flex-start',
     textAlign: 'left',
     marginLeft: IMAGE_CARD_SPACING,
