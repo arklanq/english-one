@@ -1,7 +1,7 @@
-import {SchemaOf, ValidationError} from 'yup';
+import {SchemaOf} from 'yup';
 
 export function getValidationErrorMessage(e: unknown): string {
-  return e instanceof ValidationError ? e.message : 'unknown valiation error';
+  return e instanceof Error ? e.message : 'unknown valiation error';
 }
 
 export function validateSync<T>(schema: SchemaOf<T | any>, data: unknown): asserts data is T {

@@ -5,7 +5,6 @@ import {number, object, string} from 'yup';
 import queryDatabase from '@/database/methods/queryDatabase';
 import CorruptedDatabaseException from '@/exceptions/CorruptedDatabaseException';
 import IAnswer from '@/models/IAnswer';
-import IImage from '@/models/IImage';
 import {getValidationErrorMessage, validateSync} from '@/utils/yup-utils';
 
 function prepareSqlStatement(wordsIdsCount: number) {
@@ -30,7 +29,7 @@ export default async function queryPolishWordsAnswers(db: WebSQLDatabase, wordsI
 
   const answers: IAnswer[] = [];
   for (let i = 0; i < results.rows.length; i++) {
-    const item: IImage | unknown = results.rows.item(i);
+    const item: IAnswer | unknown = results.rows.item(i);
     try {
       validateSync<IAnswer>(validationSchema, item);
       answers.push(item);

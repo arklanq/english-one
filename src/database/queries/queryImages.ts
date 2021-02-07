@@ -10,7 +10,7 @@ import {getValidationErrorMessage, validateSync} from '@/utils/yup-utils';
 function prepareSqlStatement(excludedIds: number[]) {
   return `
     SELECT id, image_url as imageUrl 
-    FROM ex2__images 
+    FROM ex3__images 
     WHERE id NOT IN (${new Array(excludedIds.length).fill('?').join(', ')}) 
     ORDER BY RANDOM() 
     LIMIT ?;`;

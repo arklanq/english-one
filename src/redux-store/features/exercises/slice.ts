@@ -19,10 +19,10 @@ const exercisesSlice = createSlice({
     overrideState: (state: Draft<IInitialState>, action: PayloadAction<IInitialState>) => action.payload,
     incrementPoints: (
       state: Draft<IInitialState>,
-      action: PayloadAction<{task: ExerciseNumber; solvedByQuestionId: number}>
+      action: PayloadAction<{task: ExerciseNumber; solvedByQuestionId: number; points?: number}>
     ) => {
       const {task, solvedByQuestionId} = action.payload;
-      state.byNumber[task].points += 1;
+      state.byNumber[task].points += action.payload.points ?? 1;
       state.byNumber[task].solvedQuestions.push(solvedByQuestionId);
       saveState(state);
     },

@@ -1,10 +1,12 @@
 import {makeStyles} from '@idkman/react-native-styles';
-import {NavigationContainer, NavigationContainerRef} from '@react-navigation/native';
+import {NavigationContainer, NavigationContainerRef, RouteProp} from '@react-navigation/native';
 import {createStackNavigator, StackNavigationOptions, StackNavigationProp} from '@react-navigation/stack';
 import React, {memo, useCallback, useRef} from 'react';
 
+import Dialogue from '@/components/screens/Dialogue';
 import Home from '@/components/screens/Home';
 import Settings from '@/components/screens/Settings';
+import IDialogueInfo from '@/models/IDialogueInfo';
 import {ITheme} from '@/models/theme/ITheme';
 
 import useScreenOptions from './hooks/useScreenOptions';
@@ -13,7 +15,11 @@ import exercises, {IExerciseRoute} from './misc/exercises';
 export type StackParamList = Record<
   'home' | 'settings' | 'exercise1' | 'exercise2' | 'exercise3' | 'exercise4' | 'exercise5',
   undefined
->;
+> & {dialogue: {dialogue: IDialogueInfo}};
+export interface IScreenNavigationProps<S extends keyof StackParamList> {
+  route: RouteProp<StackParamList, S>;
+  navigation: StackNavigationProp<StackParamList, S>;
+}
 export type ScreenNavigationProp<S extends keyof StackParamList> = StackNavigationProp<StackParamList, S>;
 export interface INavigateGlobally<N extends keyof StackParamList = keyof StackParamList> {
   (name: N, params?: StackParamList[N]): void;
@@ -54,6 +60,12 @@ function Router() {
           name='settings'
           component={Settings}
           options={{title: 'Ustawienia', headerRight: undefined}}
+        />
+        <Stack.Screen
+          key='dialogue'
+          name='dialogue'
+          component={Dialogue}
+          options={({route}) => ({title: route.params.dialogue.title})}
         />
         {exercises.map((exercise: IExerciseRoute) => (
           <Stack.Screen

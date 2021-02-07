@@ -7,7 +7,7 @@ import {useSelector} from 'react-redux';
 import {AnimationStyle} from 'victory-core';
 import {VictoryAnimation, VictoryLabel, VictoryPie} from 'victory-native';
 
-import {ITheme} from '@/models/theme/ITheme';
+import {ITheme, ThemeVariant} from '@/models/theme/ITheme';
 import {selectExercisesOverallProgress} from '@/redux-store/features/exercises/selectors';
 
 export interface IProgressChartProps {
@@ -49,15 +49,16 @@ function ProgressChart(props: IProgressChartProps) {
           height={400}
           data={data}
           innerRadius={138}
-          cornerRadius={5}
           labels={() => null}
           style={{
             data: {
               fill: ({datum}) => {
-                const color = Color(theme.palette.secondary.light)
-                  .darken(datum.y / 400)
-                  .toString();
-                return datum.x === 1 ? color : theme.palette.grey['200'];
+                let color: Color | string = Color(theme.palette.secondary.light);
+
+                if (theme.variant === ThemeVariant.LIGHT) color = color.darken(datum.y / 400).toString();
+                else color = color.darken(datum.y / 400).toString();
+
+                return datum.x === 1 ? color : theme.palette.action.selected;
               },
             },
           }}
@@ -76,6 +77,7 @@ function ProgressChart(props: IProgressChartProps) {
                   {
                     ...theme.typography.h1,
                     fontWeight: 'bold',
+                    fill: theme.palette.text.primary,
                   },
                   {
                     ...theme.typography.h2,

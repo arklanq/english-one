@@ -5,11 +5,11 @@ import {Button, Card, IconButton} from 'react-native-paper';
 
 import Typography from '@/components/atoms/Typography';
 import TypographyGroup from '@/components/atoms/TypographyGroup';
-import {ScreenNavigationProp} from '@/components/other/Router';
+import {ScreenNavigationProp, StackParamList} from '@/components/other/Router';
 import {ITheme} from '@/models/theme/ITheme';
 
 export interface IDailyQuestionsPassedProps {
-  navigation: ScreenNavigationProp<'exercise2'>;
+  navigation: ScreenNavigationProp<keyof StackParamList>;
   onDimiss: () => unknown;
 }
 

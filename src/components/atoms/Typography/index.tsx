@@ -9,6 +9,7 @@ export interface ITypographyProps extends TextProps {
   variant?: TypographyVariant;
   bold?: boolean;
   align?: TextStyle['textAlign'];
+  gutterBottom?: boolean;
   children: string | string[];
 }
 
@@ -25,14 +26,26 @@ const useStyles = makeStyles((theme: ITheme) => ({
   bold: {
     fontWeight: 'bold',
   },
+  noGutterBottom: {
+    marginBottom: 0,
+  },
 }));
 
 function Typography(props: ITypographyProps) {
-  const {variant = 'body1', bold, align, style, ...TextProps} = props;
+  const {variant = 'body1', bold, align, gutterBottom = true, style, ...TextProps} = props;
   const stylesheet = useStyles();
 
   return (
-    <Text style={[stylesheet[variant], bold && stylesheet.bold, align && {textAlign: align}, style]} {...TextProps} />
+    <Text
+      style={[
+        stylesheet[variant],
+        bold && stylesheet.bold,
+        !gutterBottom && stylesheet.noGutterBottom,
+        align && {textAlign: align},
+        style,
+      ]}
+      {...TextProps}
+    />
   );
 }
 
