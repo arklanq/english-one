@@ -58,7 +58,7 @@ function Home(props: IProps) {
         <List.Subheader>Dostępne ćwiczenia</List.Subheader>
         <Divider />
         {listItems.map(({name, title, icon}: IListItem, index: number) => {
-          const points = tasksPoints[(index + 1) as ExerciseNumber];
+          const points = tasksPoints[(index + 2) as ExerciseNumber];
           const isFullPoints = points >= 10;
 
           return (

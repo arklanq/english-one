@@ -1,7 +1,6 @@
 import {ComponentType} from 'react';
 
 import {StackParamList} from '@/components/other/Router';
-import Exercise1 from '@/components/screens/Exercise1';
 import Exercise2 from '@/components/screens/Exercise2';
 import Exercise3 from '@/components/screens/Exercise3';
 import Exercise4 from '@/components/screens/Exercise4';
@@ -14,11 +13,11 @@ export interface IExerciseRoute {
 }
 
 const exercises: IExerciseRoute[] = [
-  {
+  /*{
     name: 'exercise1',
     title: 'Dopasuj kolejność',
     component: Exercise1,
-  },
+  },*/
   {
     name: 'exercise2',
     title: 'Zgadnij co to',

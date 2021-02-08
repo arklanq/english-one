@@ -64,6 +64,7 @@
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.15.2",
     "react-native-svg": "^12.1.0",
+    "react-navigation-fluid-transitions": "^0.3.2",
     "react-redux": "^7.2.2",
     "redux": "^4.0.5",
     "serialize-error": "^8.0.1",

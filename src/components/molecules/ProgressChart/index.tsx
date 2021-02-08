@@ -27,7 +27,7 @@ function ProgressChart(props: IProgressChartProps) {
 
   const [initial, setInitial] = useState<boolean>(true);
   const overallProgress = useSelector(selectExercisesOverallProgress);
-  const percent = initial && overallProgress < 50 ? 0 : Math.floor((overallProgress / (5 * 10)) * 100);
+  const percent = initial && overallProgress < 40 ? 0 : Math.floor((overallProgress / (4 * 10)) * 100);
   const data: {x: number; y: number}[] = useMemo(() => {
     return [
       {x: 1, y: percent},

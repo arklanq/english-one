@@ -13,11 +13,11 @@ export interface IListItem {
 }
 
 const listItems: IListItem[] = [
-  {
+  /*{
     name: 'exercise1',
     title: 'Dopasuj kolejność',
     icon: (props: IListItemIconProps) => <List.Icon {...props} icon='drag-variant' />,
-  },
+  },*/
   {
     name: 'exercise2',
     title: 'Zgadnij co to',

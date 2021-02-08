@@ -1,5 +1,7 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {Appearance, ColorSchemeName} from 'react-native';
+import {ColorSchemeName} from 'react-native';
+
+import {initialState, saveState} from './persistent-state';
 
 export type ColorScheme = Exclude<ColorSchemeName, null | undefined>;
 
@@ -12,34 +14,38 @@ export interface IInitialState {
   colorScheme: IColorSchemeInfo;
 }
 
-export const initialState: IInitialState = {
-  colorScheme: {
-    system: Appearance.getColorScheme() ?? 'light',
-    userPreference: 'automatic',
-  },
-};
-
 const appearanceSlice = createSlice({
   name: 'APPEARANCE',
   initialState: initialState as IInitialState, // better ts autocompletation in reducers
   reducers: {
-    setSystemColorScheme: (state: IInitialState, action: PayloadAction<IColorSchemeInfo['system']>) => ({
-      ...state,
-      colorScheme: {
-        ...state.colorScheme,
-        system: action.payload,
-      },
-    }),
+    overrideState: (state: IInitialState, action: PayloadAction<IInitialState>) => action.payload,
+    setSystemColorScheme: (state: IInitialState, action: PayloadAction<IColorSchemeInfo['system']>) => {
+      const newState: IInitialState = {
+        ...state,
+        colorScheme: {
+          ...state.colorScheme,
+          system: action.payload,
+        },
+      };
+
+      saveState(state);
+      return newState;
+    },
     setUserPreferredColorScheme: (
       state: IInitialState,
       action: PayloadAction<Exclude<IColorSchemeInfo['userPreference'], undefined>>
-    ) => ({
-      ...state,
-      colorScheme: {
-        ...state.colorScheme,
-        userPreference: action.payload,
-      },
-    }),
+    ) => {
+      const newState: IInitialState = {
+        ...state,
+        colorScheme: {
+          ...state.colorScheme,
+          userPreference: action.payload,
+        },
+      };
+
+      saveState(newState);
+      return newState;
+    },
   },
 });
 
