@@ -1234,7 +1234,7 @@
 
 "@expo/config-plugins@1.0.18":
   version "1.0.18"
-  resolved "https://npm-registry.sheep.guru:443/@expo%2fconfig-plugins/-/config-plugins-1.0.18.tgz#f0f7d36316d60ea67b4cc6394bffef6d6904345d"
+  resolved "https://registry.npmjs.org/@expo%2fconfig-plugins/-/config-plugins-1.0.18.tgz#f0f7d36316d60ea67b4cc6394bffef6d6904345d"
   integrity sha512-8Ey+22cEAOxK+SBJY+OazaLsPyL5FXdsykfBg/QQJE2Y/DTFebUVlr5bQyeqavbASDvmDxg3Fd71A8Se8+qT1g==
   dependencies:
     "@expo/config-types" "^40.0.0-beta.2"
@@ -1277,7 +1277,7 @@
 
 "@expo/config@3.3.28":
   version "3.3.28"
-  resolved "https://npm-registry.sheep.guru:443/@expo%2fconfig/-/config-3.3.28.tgz#8d3869cf9223c35bff4f905595692cb36404c83f"
+  resolved "https://registry.npmjs.org/@expo%2fconfig/-/config-3.3.28.tgz#8d3869cf9223c35bff4f905595692cb36404c83f"
   integrity sha512-0zJBOZIl/p4KejUkz6G6uzMjGnWsooWayDk7TeFSCxWZ84HWGCx+LIXbEkc8c/CmMm9HyjYlhESw96mwZZzpPQ==
   dependencies:
     "@babel/core" "7.9.0"
@@ -1329,7 +1329,7 @@
 
 "@expo/configure-splash-screen@0.3.3":
   version "0.3.3"
-  resolved "https://npm-registry.sheep.guru:443/@expo%2fconfigure-splash-screen/-/configure-splash-screen-0.3.3.tgz#ef44ba4d62443297f9d8a9326a71b40b8b413528"
+  resolved "https://registry.npmjs.org/@expo%2fconfigure-splash-screen/-/configure-splash-screen-0.3.3.tgz#ef44ba4d62443297f9d8a9326a71b40b8b413528"
   integrity sha512-fWy6Z52Mj2a7yjdvpIJkP9G3kfkoXE79aHvTDwgggIE0KLhwnPF27v+KS0wJUf7b4JM6w0zKOlUZjQhn0kSNyA==
   dependencies:
     "@react-native-community/cli-platform-ios" "^4.10.0"
@@ -1373,7 +1373,7 @@
 
 "@expo/json-file@8.2.27":
   version "8.2.27"
-  resolved "https://npm-registry.sheep.guru:443/@expo%2fjson-file/-/json-file-8.2.27.tgz#548ff0a9989f9f789cdb2b689d17a4faf491de67"
+  resolved "https://registry.npmjs.org/@expo%2fjson-file/-/json-file-8.2.27.tgz#548ff0a9989f9f789cdb2b689d17a4faf491de67"
   integrity sha512-Iyqg1jbXOTg0JfCGwMrkaaRmVFjQrWDBQAhYLTdvOD3GrXYuKI1vUV+3Wqw0NnU+TYoNUpi7aB8dNzPvLj0oag==
   dependencies:
     "@babel/code-frame" "~7.10.4"
@@ -1392,7 +1392,7 @@
 
 "@expo/metro-config@^0.1.54":
   version "0.1.54"
-  resolved "https://npm-registry.sheep.guru:443/@expo%2fmetro-config/-/metro-config-0.1.54.tgz#12628d8ad0ff329e88744126348cea41dea75163"
+  resolved "https://registry.npmjs.org/@expo%2fmetro-config/-/metro-config-0.1.54.tgz#12628d8ad0ff329e88744126348cea41dea75163"
   integrity sha512-DOlTzNheS5IZDDmQjWt60mAmbFreH8xT3ZXc6y/k4UVq7khQ41/g5kl1AJOC9WzE6xgPtmDQqTWanBprn+OhzA==
   dependencies:
     "@expo/config" "3.3.28"
@@ -1471,7 +1471,7 @@
 
 "@idkman/react-native-styles@*":
   version "0.3.2"
-  resolved "https://npm-registry.sheep.guru:443/@idkman%2freact-native-styles/-/react-native-styles-0.3.2.tgz#8eeef95a621cf2c43585d51bea3bd481853365ee"
+  resolved "https://registry.npmjs.org/@idkman%2freact-native-styles/-/react-native-styles-0.3.2.tgz#8eeef95a621cf2c43585d51bea3bd481853365ee"
   integrity sha512-cSmdDhE75AUAqdgiueyQRU7YyfQhqrYI6wP2pfhXPLASaP40TpzJP2TIZjxhTFyL23xrbZTPUpZnjjLj05Zv3w==
 
 "@jest/console@^24.9.0":
@@ -2140,7 +2140,7 @@
 
 "@types/react-native-snap-carousel@^3.8.2":
   version "3.8.2"
-  resolved "https://npm-registry.sheep.guru:443/@types%2freact-native-snap-carousel/-/react-native-snap-carousel-3.8.2.tgz#31fb91530198183c658db0d23935ca79850419f5"
+  resolved "https://registry.npmjs.org/@types%2freact-native-snap-carousel/-/react-native-snap-carousel-3.8.2.tgz#31fb91530198183c658db0d23935ca79850419f5"
   integrity sha512-ItvLo19gQstxcir6wIXJxwohxdYj9t/lXv+MXfqhwMSYaR+Xa3vOP7b6TYQCe9GqDPH3sEgEg/uH6CLV+fhcWA==
   dependencies:
     "@types/react" "*"
@@ -2148,14 +2148,14 @@
 
 "@types/react-native@*":
   version "0.63.46"
-  resolved "https://npm-registry.sheep.guru:443/@types%2freact-native/-/react-native-0.63.46.tgz#942df5af29046c6f22227495e00d5297cc1cea73"
+  resolved "https://registry.npmjs.org/@types%2freact-native/-/react-native-0.63.46.tgz#942df5af29046c6f22227495e00d5297cc1cea73"
   integrity sha512-SnBnWRErpISIaWk4K8kAfIKqSPdZ8fdH6HIw7kVdz6jMl/5FAf6iXeIwRfVZg1bCMh+ymNPCpSENNNEVprxj/w==
   dependencies:
     "@types/react" "*"
 
 "@types/react-native@0.63.40":
   version "0.63.40"
-  resolved "https://npm-registry.sheep.guru:443/@types%2freact-native/-/react-native-0.63.40.tgz#66b11824a6aadb0dde0db87bd8aff58165c7a8f8"
+  resolved "https://registry.npmjs.org/@types%2freact-native/-/react-native-0.63.40.tgz#66b11824a6aadb0dde0db87bd8aff58165c7a8f8"
   integrity sha512-y98TQBjfncIrdDrwIhxcmcad1gHKNfUKFnCBk3heYy0Gvt6BNcBeSKRvACV4cf6R1K/cNJMoS3rjaMvYhQyAgw==
   dependencies:
     "@types/react" "*"
@@ -2436,7 +2436,7 @@ ansi-red@^0.1.1:
 
 ansi-regex@^2.0.0:
   version "2.1.1"
-  resolved "https://npm-registry.sheep.guru:443/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
+  resolved "https://registry.npmjs.org/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"
   integrity sha1-w7M6te42DYbg5ijwRorn7yfWVN8=
 
 ansi-regex@^3.0.0:
@@ -2456,7 +2456,7 @@ ansi-regex@^5.0.0:
 
 ansi-styles@^2.2.1:
   version "2.2.1"
-  resolved "https://npm-registry.sheep.guru:443/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
+  resolved "https://registry.npmjs.org/ansi-styles/-/ansi-styles-2.2.1.tgz#b432dd3358b634cf75e1e4664368240533c1ddbe"
   integrity sha1-tDLdM1i2NM914eRmQ2gkBTPB3b4=
 
 ansi-styles@^3.2.0, ansi-styles@^3.2.1:
@@ -2781,7 +2781,7 @@ bmp-js@^0.1.0:
 
 boolbase@^1.0.0, boolbase@~1.0.0:
   version "1.0.0"
-  resolved "https://npm-registry.sheep.guru:443/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
+  resolved "https://registry.npmjs.org/boolbase/-/boolbase-1.0.0.tgz#68dff5fbe60c51eb37725ea9e3ed310dcc1e776e"
   integrity sha1-aN/1++YMUes3cl6p4+0xDcwed24=
 
 bplist-creator@0.0.8:
@@ -2976,7 +2976,7 @@ chalk@4.1.0, chalk@^4.0.0, chalk@^4.1.0:
 
 chalk@^1.1.3:
   version "1.1.3"
-  resolved "https://npm-registry.sheep.guru:443/chalk/-/chalk-1.1.3.tgz#a8115c55e4a702fe4d150abd3872822a7e09fc98"
+  resolved "https://registry.npmjs.org/chalk/-/chalk-1.1.3.tgz#a8115c55e4a702fe4d150abd3872822a7e09fc98"
   integrity sha1-qBFcVeSnAv5NFQq9OHKCKn4J/Jg=
   dependencies:
     ansi-styles "^2.2.1"
@@ -3331,7 +3331,7 @@ cosmiconfig@^7.0.0:
 
 cross-env@^7.0.3:
   version "7.0.3"
-  resolved "https://npm-registry.sheep.guru:443/cross-env/-/cross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
+  resolved "https://registry.npmjs.org/cross-env/-/cross-env-7.0.3.tgz#865264b29677dc015ba8418918965dd232fc54cf"
   integrity sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==
   dependencies:
     cross-spawn "^7.0.1"
@@ -3379,7 +3379,7 @@ crypto-random-string@^1.0.0:
 
 css-select@^2.1.0:
   version "2.1.0"
-  resolved "https://npm-registry.sheep.guru:443/css-select/-/css-select-2.1.0.tgz#6a34653356635934a81baca68d0255432105dbef"
+  resolved "https://registry.npmjs.org/css-select/-/css-select-2.1.0.tgz#6a34653356635934a81baca68d0255432105dbef"
   integrity sha512-Dqk7LQKpwLoH3VovzZnkzegqNSuAziQyNZUcrdDM401iY+R5NkGBXGmtO05/yaXQziALuPogeG0b7UAgjnTJTQ==
   dependencies:
     boolbase "^1.0.0"
@@ -3389,7 +3389,7 @@ css-select@^2.1.0:
 
 css-tree@^1.0.0-alpha.39:
   version "1.1.2"
-  resolved "https://npm-registry.sheep.guru:443/css-tree/-/css-tree-1.1.2.tgz#9ae393b5dafd7dae8a622475caec78d3d8fbd7b5"
+  resolved "https://registry.npmjs.org/css-tree/-/css-tree-1.1.2.tgz#9ae393b5dafd7dae8a622475caec78d3d8fbd7b5"
   integrity sha512-wCoWush5Aeo48GLhfHPbmvZs59Z+M7k5+B1xDnXbdWNcEF423DoFdqSWE0PM5aNk5nI5cp1q7ms36zGApY/sKQ==
   dependencies:
     mdn-data "2.0.14"
@@ -3397,7 +3397,7 @@ css-tree@^1.0.0-alpha.39:
 
 css-what@^3.2.1:
   version "3.4.2"
-  resolved "https://npm-registry.sheep.guru:443/css-what/-/css-what-3.4.2.tgz#ea7026fcb01777edbde52124e21f327e7ae950e4"
+  resolved "https://registry.npmjs.org/css-what/-/css-what-3.4.2.tgz#ea7026fcb01777edbde52124e21f327e7ae950e4"
   integrity sha512-ACUm3L0/jiZTqfzRM3Hi9Q8eZqd6IK37mMWPLz9PJxkLWllYeRf+EHUSHYEtFop2Eqytaq1FizFVh7XfBnXCDQ==
 
 csstype@^3.0.2:
@@ -3407,51 +3407,51 @@ csstype@^3.0.2:
 
 d3-array@^1.2.0:
   version "1.2.4"
-  resolved "https://npm-registry.sheep.guru:443/d3-array/-/d3-array-1.2.4.tgz#635ce4d5eea759f6f605863dbcfc30edc737f71f"
+  resolved "https://registry.npmjs.org/d3-array/-/d3-array-1.2.4.tgz#635ce4d5eea759f6f605863dbcfc30edc737f71f"
   integrity sha512-KHW6M86R+FUPYGb3R5XiYjXPq7VzwxZ22buHhAEVG5ztoEcZZMLov530mmccaqA1GghZArjQV46fuc8kUqhhHw==
 
 d3-array@^2.4.0:
   version "2.11.0"
-  resolved "https://npm-registry.sheep.guru:443/d3-array/-/d3-array-2.11.0.tgz#5ed6a2869bc7d471aec8df9ff6ed9fef798facc4"
+  resolved "https://registry.npmjs.org/d3-array/-/d3-array-2.11.0.tgz#5ed6a2869bc7d471aec8df9ff6ed9fef798facc4"
   integrity sha512-26clcwmHQEdsLv34oNKq5Ia9tQ26Y/4HqS3dQzF42QBUqymZJ+9PORcN1G52bt37NsL2ABoX4lvyYZc+A9Y0zw==
   dependencies:
     internmap "^1.0.0"
 
 d3-collection@1:
   version "1.0.7"
-  resolved "https://npm-registry.sheep.guru:443/d3-collection/-/d3-collection-1.0.7.tgz#349bd2aa9977db071091c13144d5e4f16b5b310e"
+  resolved "https://registry.npmjs.org/d3-collection/-/d3-collection-1.0.7.tgz#349bd2aa9977db071091c13144d5e4f16b5b310e"
   integrity sha512-ii0/r5f4sjKNTfh84Di+DpztYwqKhEyUlKoPrzUFfeSkWxjW49xU2QzO9qrPrNkpdI0XJkfzvmTu8V2Zylln6A==
 
 d3-color@1:
   version "1.4.1"
-  resolved "https://npm-registry.sheep.guru:443/d3-color/-/d3-color-1.4.1.tgz#c52002bf8846ada4424d55d97982fef26eb3bc8a"
+  resolved "https://registry.npmjs.org/d3-color/-/d3-color-1.4.1.tgz#c52002bf8846ada4424d55d97982fef26eb3bc8a"
   integrity sha512-p2sTHSLCJI2QKunbGb7ocOh7DgTAn8IrLx21QRc/BSnodXM4sv6aLQlnfpvehFMLZEfBc6g9pH9SWQccFYfJ9Q==
 
 d3-ease@^1.0.0:
   version "1.0.7"
-  resolved "https://npm-registry.sheep.guru:443/d3-ease/-/d3-ease-1.0.7.tgz#9a834890ef8b8ae8c558b2fe55bd57f5993b85e2"
+  resolved "https://registry.npmjs.org/d3-ease/-/d3-ease-1.0.7.tgz#9a834890ef8b8ae8c558b2fe55bd57f5993b85e2"
   integrity sha512-lx14ZPYkhNx0s/2HX5sLFUI3mbasHjSSpwO/KaaNACweVwxUruKyWVcb293wMv1RqTPZyZ8kSZ2NogUZNcLOFQ==
 
 d3-format@1:
   version "1.4.5"
-  resolved "https://npm-registry.sheep.guru:443/d3-format/-/d3-format-1.4.5.tgz#374f2ba1320e3717eb74a9356c67daee17a7edb4"
+  resolved "https://registry.npmjs.org/d3-format/-/d3-format-1.4.5.tgz#374f2ba1320e3717eb74a9356c67daee17a7edb4"
   integrity sha512-J0piedu6Z8iB6TbIGfZgDzfXxUFN3qQRMofy2oPdXzQibYGqPB/9iMcxr/TGalU+2RsyDO+U4f33id8tbnSRMQ==
 
 d3-interpolate@1, d3-interpolate@^1.1.1:
   version "1.4.0"
-  resolved "https://npm-registry.sheep.guru:443/d3-interpolate/-/d3-interpolate-1.4.0.tgz#526e79e2d80daa383f9e0c1c1c7dcc0f0583e987"
+  resolved "https://registry.npmjs.org/d3-interpolate/-/d3-interpolate-1.4.0.tgz#526e79e2d80daa383f9e0c1c1c7dcc0f0583e987"
   integrity sha512-V9znK0zc3jOPV4VD2zZn0sDhZU3WAE2bmlxdIwwQPPzPjvyLkd8B3JUVdS1IDUFDkWZ72c9qnv1GK2ZagTZ8EA==
   dependencies:
     d3-color "1"
 
 d3-path@1:
   version "1.0.9"
-  resolved "https://npm-registry.sheep.guru:443/d3-path/-/d3-path-1.0.9.tgz#48c050bb1fe8c262493a8caf5524e3e9591701cf"
+  resolved "https://registry.npmjs.org/d3-path/-/d3-path-1.0.9.tgz#48c050bb1fe8c262493a8caf5524e3e9591701cf"
   integrity sha512-VLaYcn81dtHVTjEHd8B+pbe9yHWpXKZUC87PzoFmsFrJqgFwDe/qxfp5MlfsfM1V5E/iVt0MmEbWQ7FVIXh/bg==
 
 d3-scale@^1.0.0:
   version "1.0.7"
-  resolved "https://npm-registry.sheep.guru:443/d3-scale/-/d3-scale-1.0.7.tgz#fa90324b3ea8a776422bd0472afab0b252a0945d"
+  resolved "https://registry.npmjs.org/d3-scale/-/d3-scale-1.0.7.tgz#fa90324b3ea8a776422bd0472afab0b252a0945d"
   integrity sha512-KvU92czp2/qse5tUfGms6Kjig0AhHOwkzXG0+PqIJB3ke0WUv088AHMZI0OssO9NCkXt4RP8yju9rpH8aGB7Lw==
   dependencies:
     d3-array "^1.2.0"
@@ -3464,31 +3464,31 @@ d3-scale@^1.0.0:
 
 d3-shape@^1.0.0, d3-shape@^1.2.0:
   version "1.3.7"
-  resolved "https://npm-registry.sheep.guru:443/d3-shape/-/d3-shape-1.3.7.tgz#df63801be07bc986bc54f63789b4fe502992b5d7"
+  resolved "https://registry.npmjs.org/d3-shape/-/d3-shape-1.3.7.tgz#df63801be07bc986bc54f63789b4fe502992b5d7"
   integrity sha512-EUkvKjqPFUAZyOlhY5gzCxCeI0Aep04LwIRpsZ/mLFelJiUfnK56jo5JMDSE7yyP2kLSb6LtF+S5chMk7uqPqw==
   dependencies:
     d3-path "1"
 
 d3-time-format@2:
   version "2.3.0"
-  resolved "https://npm-registry.sheep.guru:443/d3-time-format/-/d3-time-format-2.3.0.tgz#107bdc028667788a8924ba040faf1fbccd5a7850"
+  resolved "https://registry.npmjs.org/d3-time-format/-/d3-time-format-2.3.0.tgz#107bdc028667788a8924ba040faf1fbccd5a7850"
   integrity sha512-guv6b2H37s2Uq/GefleCDtbe0XZAuy7Wa49VGkPVPMfLL9qObgBST3lEHJBMUp8S7NdLQAGIvr2KXk8Hc98iKQ==
   dependencies:
     d3-time "1"
 
 d3-time@1:
   version "1.1.0"
-  resolved "https://npm-registry.sheep.guru:443/d3-time/-/d3-time-1.1.0.tgz#b1e19d307dae9c900b7e5b25ffc5dcc249a8a0f1"
+  resolved "https://registry.npmjs.org/d3-time/-/d3-time-1.1.0.tgz#b1e19d307dae9c900b7e5b25ffc5dcc249a8a0f1"
   integrity sha512-Xh0isrZ5rPYYdqhAVk8VLnMEidhz5aP7htAADH6MfzgmmicPkTo8LhkLxci61/lCB7n7UmE3bN0leRt+qvkLxA==
 
 d3-timer@^1.0.0:
   version "1.0.10"
-  resolved "https://npm-registry.sheep.guru:443/d3-timer/-/d3-timer-1.0.10.tgz#dfe76b8a91748831b13b6d9c793ffbd508dd9de5"
+  resolved "https://registry.npmjs.org/d3-timer/-/d3-timer-1.0.10.tgz#dfe76b8a91748831b13b6d9c793ffbd508dd9de5"
   integrity sha512-B1JDm0XDaQC+uvo4DT79H0XmBskgS3l6Ve+1SBCfxgmtIb1AVrPIoqd+nPSv+loMX8szQ0sVUhGngL7D5QPiXw==
 
 d3-voronoi@^1.1.2:
   version "1.1.4"
-  resolved "https://npm-registry.sheep.guru:443/d3-voronoi/-/d3-voronoi-1.1.4.tgz#dd3c78d7653d2bb359284ae478645d95944c8297"
+  resolved "https://registry.npmjs.org/d3-voronoi/-/d3-voronoi-1.1.4.tgz#dd3c78d7653d2bb359284ae478645d95944c8297"
   integrity sha512-dArJ32hchFsrQ8uMiTBLq256MpnZjeuBtdHpaDlYuQyjU0CVzCJl/BVW+SkszaAeH95D/8gxqAhgx0ouAWAfRg==
 
 dargs@^7.0.0:
@@ -3573,7 +3573,7 @@ deep-is@^0.1.3:
 
 deepmerge@^2.1.1:
   version "2.2.1"
-  resolved "https://npm-registry.sheep.guru:443/deepmerge/-/deepmerge-2.2.1.tgz#5d3ff22a01c00f645405a2fbc17d0778a1801170"
+  resolved "https://registry.npmjs.org/deepmerge/-/deepmerge-2.2.1.tgz#5d3ff22a01c00f645405a2fbc17d0778a1801170"
   integrity sha512-R9hc1Xa/NOBi9WRVUWg19rl1UB7Tt4kuPd+thNJgFZoxXsTz7ncaPaeIm+40oSGuP33DfMb4sZt1QIGiJzC4EA==
 
 deepmerge@^3.2.0:
@@ -3619,12 +3619,12 @@ define-property@^2.0.2:
 
 delaunator@^4.0.0:
   version "4.0.1"
-  resolved "https://npm-registry.sheep.guru:443/delaunator/-/delaunator-4.0.1.tgz#3d779687f57919a7a418f8ab947d3bddb6846957"
+  resolved "https://registry.npmjs.org/delaunator/-/delaunator-4.0.1.tgz#3d779687f57919a7a418f8ab947d3bddb6846957"
   integrity sha512-WNPWi1IRKZfCt/qIDMfERkDp93+iZEmOxN2yy4Jg+Xhv8SLk2UTqqbe1sfiipn0and9QrE914/ihdx82Y/Giag==
 
 delaunay-find@0.0.5:
   version "0.0.5"
-  resolved "https://npm-registry.sheep.guru:443/delaunay-find/-/delaunay-find-0.0.5.tgz#5fb37e6509da934881b4b16c08898ac89862c097"
+  resolved "https://registry.npmjs.org/delaunay-find/-/delaunay-find-0.0.5.tgz#5fb37e6509da934881b4b16c08898ac89862c097"
   integrity sha512-7yAJ/wmKWj3SgqjtkGqT/RCwI0HWAo5YnHMoF5nYXD8cdci+YSo23iPmgrZUNOpDxRWN91PqxUvMMr2lKpjr+w==
   dependencies:
     delaunator "^4.0.0"
@@ -3675,7 +3675,7 @@ doctrine@^3.0.0:
 
 dom-serializer@0:
   version "0.2.2"
-  resolved "https://npm-registry.sheep.guru:443/dom-serializer/-/dom-serializer-0.2.2.tgz#1afb81f533717175d478655debc5e332d9f9bb51"
+  resolved "https://registry.npmjs.org/dom-serializer/-/dom-serializer-0.2.2.tgz#1afb81f533717175d478655debc5e332d9f9bb51"
   integrity sha512-2/xPb3ORsQ42nHYiSunXkDjPLBaEj/xTwUO4B7XCZQTRk7EBtTOPaygh10YAAh2OI1Qrp6NWfpAhzswj0ydt9g==
   dependencies:
     domelementtype "^2.0.1"
@@ -3688,17 +3688,17 @@ dom-walk@^0.1.0:
 
 domelementtype@1:
   version "1.3.1"
-  resolved "https://npm-registry.sheep.guru:443/domelementtype/-/domelementtype-1.3.1.tgz#d048c44b37b0d10a7f2a3d5fee3f4333d790481f"
+  resolved "https://registry.npmjs.org/domelementtype/-/domelementtype-1.3.1.tgz#d048c44b37b0d10a7f2a3d5fee3f4333d790481f"
   integrity sha512-BSKB+TSpMpFI/HOxCNr1O8aMOTZ8hT3pM3GQ0w/mWRmkhEDSFJkkyzz4XQsBV44BChwGkrDfMyjVD0eA2aFV3w==
 
 domelementtype@^2.0.1:
   version "2.1.0"
-  resolved "https://npm-registry.sheep.guru:443/domelementtype/-/domelementtype-2.1.0.tgz#a851c080a6d1c3d94344aed151d99f669edf585e"
+  resolved "https://registry.npmjs.org/domelementtype/-/domelementtype-2.1.0.tgz#a851c080a6d1c3d94344aed151d99f669edf585e"
   integrity sha512-LsTgx/L5VpD+Q8lmsXSHW2WpA+eBlZ9HPf3erD1IoPF00/3JKHZ3BknUVA2QGDNu69ZNmyFmCWBSO45XjYKC5w==
 
 domutils@^1.7.0:
   version "1.7.0"
-  resolved "https://npm-registry.sheep.guru:443/domutils/-/domutils-1.7.0.tgz#56ea341e834e06e6748af7a1cb25da67ea9f8c2a"
+  resolved "https://registry.npmjs.org/domutils/-/domutils-1.7.0.tgz#56ea341e834e06e6748af7a1cb25da67ea9f8c2a"
   integrity sha512-Lgd2XcJ/NjEw+7tFvfKxOzCYKZsdct5lczQ2ZaQY8Djz7pfAD3Gbp8ySJWtreII/vDlMVmxwa6pHmdxIYgttDg==
   dependencies:
     dom-serializer "0"
@@ -3759,7 +3759,7 @@ enquirer@^2.3.5, enquirer@^2.3.6:
 
 entities@^2.0.0:
   version "2.2.0"
-  resolved "https://npm-registry.sheep.guru:443/entities/-/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
+  resolved "https://registry.npmjs.org/entities/-/entities-2.2.0.tgz#098dc90ebb83d8dffa089d55256b351d34c4da55"
   integrity sha512-p92if5Nz619I0w+akJrLZH0MX0Pb5DX39XOwQTtXSdQQOaYH03S1uIQp4mhOZtAXrxq4ViO67YTiLBo2638o9A==
 
 envinfo@^7.7.2:
@@ -3844,12 +3844,12 @@ es-to-primitive@^1.2.1:
 
 es6-template-regex@^0.1.1:
   version "0.1.1"
-  resolved "https://npm-registry.sheep.guru:443/es6-template-regex/-/es6-template-regex-0.1.1.tgz#e517b9e0f742beeb8d3040834544fda0e4651467"
+  resolved "https://registry.npmjs.org/es6-template-regex/-/es6-template-regex-0.1.1.tgz#e517b9e0f742beeb8d3040834544fda0e4651467"
   integrity sha1-5Re54PdCvuuNMECDRUT9oORlFGc=
 
 es6-template@^1.0.4:
   version "1.0.4"
-  resolved "https://npm-registry.sheep.guru:443/es6-template/-/es6-template-1.0.4.tgz#56af42b57a31f5175d3f567d44b1efc12d2f2636"
+  resolved "https://registry.npmjs.org/es6-template/-/es6-template-1.0.4.tgz#56af42b57a31f5175d3f567d44b1efc12d2f2636"
   integrity sha1-Vq9CtXox9RddP1Z9RLHvwS0vJjY=
   dependencies:
     es6-template-regex "^0.1.1"
@@ -4646,7 +4646,7 @@ foreach@^2.0.5:
 
 formik@^2.2.6:
   version "2.2.6"
-  resolved "https://npm-registry.sheep.guru:443/formik/-/formik-2.2.6.tgz#378a4bafe4b95caf6acf6db01f81f3fe5147559d"
+  resolved "https://registry.npmjs.org/formik/-/formik-2.2.6.tgz#378a4bafe4b95caf6acf6db01f81f3fe5147559d"
   integrity sha512-Kxk2zQRafy56zhLmrzcbryUpMBvT0tal5IvcifK5+4YNGelKsnrODFJ0sZQRMQboblWNym4lAW3bt+tf2vApSA==
   dependencies:
     deepmerge "^2.1.1"
@@ -4869,7 +4869,7 @@ hard-rejection@^2.1.0:
 
 has-ansi@^2.0.0:
   version "2.0.0"
-  resolved "https://npm-registry.sheep.guru:443/has-ansi/-/has-ansi-2.0.0.tgz#34f5049ce1ecdf2b0649af3ef24e45ed35416d91"
+  resolved "https://registry.npmjs.org/has-ansi/-/has-ansi-2.0.0.tgz#34f5049ce1ecdf2b0649af3ef24e45ed35416d91"
   integrity sha1-NPUEnOHs3ysGSa8+8k5F7TVBbZE=
   dependencies:
     ansi-regex "^2.0.0"
@@ -5109,7 +5109,7 @@ internal-slot@^1.0.2:
 
 internmap@^1.0.0:
   version "1.0.0"
-  resolved "https://npm-registry.sheep.guru:443/internmap/-/internmap-1.0.0.tgz#3c6bf0944b0eae457698000412108752bbfddb56"
+  resolved "https://registry.npmjs.org/internmap/-/internmap-1.0.0.tgz#3c6bf0944b0eae457698000412108752bbfddb56"
   integrity sha512-SdoDWwNOTE2n4JWUsLn4KXZGuZPjPF9yyOGc8bnfWnBQh7BD/l80rzSznKc/r4Y0aQ7z3RTk9X+tV4tHBpu+dA==
 
 invariant@^2.2.2, invariant@^2.2.4:
@@ -5604,7 +5604,7 @@ json-stable-stringify@^1.0.1:
 
 json-stringify-safe@^5.0.1:
   version "5.0.1"
-  resolved "https://npm-registry.sheep.guru:443/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
+  resolved "https://registry.npmjs.org/json-stringify-safe/-/json-stringify-safe-5.0.1.tgz#1296a2d58fd45f19a0f6ce01d65701e2c735b6eb"
   integrity sha1-Epai1Y/UXxmg9s4B1lcB4sc1tus=
 
 json5@^0.5.1:
@@ -5705,7 +5705,7 @@ klaw@^1.0.0:
 
 lazy-cache@^1.0.3:
   version "1.0.4"
-  resolved "https://npm-registry.sheep.guru:443/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
+  resolved "https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"
   integrity sha1-odePw6UEdMuAhF07O24dpJpEbo4=
 
 leven@^3.1.0:
@@ -5828,12 +5828,12 @@ lodash._reinterpolate@^3.0.0:
 
 lodash.chunk@*:
   version "4.2.0"
-  resolved "https://npm-registry.sheep.guru:443/lodash.chunk/-/lodash.chunk-4.2.0.tgz#66e5ce1f76ed27b4303d8c6512e8d1216e8106bc"
+  resolved "https://registry.npmjs.org/lodash.chunk/-/lodash.chunk-4.2.0.tgz#66e5ce1f76ed27b4303d8c6512e8d1216e8106bc"
   integrity sha1-ZuXOH3btJ7QwPYxlEujRIW6BBrw=
 
 lodash.clamp@*:
   version "4.0.3"
-  resolved "https://npm-registry.sheep.guru:443/lodash.clamp/-/lodash.clamp-4.0.3.tgz#5c24bedeeeef0753560dc2b4cb4671f90a6ddfaa"
+  resolved "https://registry.npmjs.org/lodash.clamp/-/lodash.clamp-4.0.3.tgz#5c24bedeeeef0753560dc2b4cb4671f90a6ddfaa"
   integrity sha1-XCS+3u7vB1NWDcK0y0Zx+Qpt36o=
 
 lodash.frompairs@^4.0.1:
@@ -5863,7 +5863,7 @@ lodash.pick@^4.4.0:
 
 lodash.sortby@*:
   version "4.7.0"
-  resolved "https://npm-registry.sheep.guru:443/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
+  resolved "https://registry.npmjs.org/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
 
 lodash.template@^4.0.2, lodash.template@^4.5.0:
@@ -5992,7 +5992,7 @@ md5-file@^3.2.3:
 
 mdn-data@2.0.14:
   version "2.0.14"
-  resolved "https://npm-registry.sheep.guru:443/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
+  resolved "https://registry.npmjs.org/mdn-data/-/mdn-data-2.0.14.tgz#7113fc4281917d63ce29b43446f701e68c25ba50"
   integrity sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==
 
 meow@^8.0.0:
@@ -6628,7 +6628,7 @@ npm-run-path@^4.0.0:
 
 nth-check@^1.0.2:
   version "1.0.2"
-  resolved "https://npm-registry.sheep.guru:443/nth-check/-/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
+  resolved "https://registry.npmjs.org/nth-check/-/nth-check-1.0.2.tgz#b2bd295c37e3dd58a3bf0700376663ba4d9cf05c"
   integrity sha512-WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg==
   dependencies:
     boolbase "~1.0.0"
@@ -7289,7 +7289,7 @@ react-dom@16.13.1:
 
 react-fast-compare@^2.0.0, react-fast-compare@^2.0.1:
   version "2.0.4"
-  resolved "https://npm-registry.sheep.guru:443/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
+  resolved "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
 react-is@^16.12.0, react-is@^16.13.0, react-is@^16.13.1, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4:
@@ -7313,7 +7313,7 @@ react-native-appearance@^0.3.4:
 
 react-native-debugger-open@^0.3.25:
   version "0.3.25"
-  resolved "https://npm-registry.sheep.guru:443/react-native-debugger-open/-/react-native-debugger-open-0.3.25.tgz#4e735f7fb5eb10befe81e16d1dcc54b9f1a2d1d8"
+  resolved "https://registry.npmjs.org/react-native-debugger-open/-/react-native-debugger-open-0.3.25.tgz#4e735f7fb5eb10befe81e16d1dcc54b9f1a2d1d8"
   integrity sha512-jOzdcBIRl2beyOriwhedg/3Xj0m15htD5+PEEKlCM6Mcwc3g+8SomSBd0E49qrhgpvDQYWLDHNdU+5OZAXIgsw==
   dependencies:
     chalk "^1.1.3"
@@ -7365,7 +7365,7 @@ react-native-screens@^2.15.2:
 
 react-native-svg@^12.1.0:
   version "12.1.0"
-  resolved "https://npm-registry.sheep.guru:443/react-native-svg/-/react-native-svg-12.1.0.tgz#acfe48c35cd5fca3d5fd767abae0560c36cfc03d"
+  resolved "https://registry.npmjs.org/react-native-svg/-/react-native-svg-12.1.0.tgz#acfe48c35cd5fca3d5fd767abae0560c36cfc03d"
   integrity sha512-1g9qBRci7man8QsHoXn6tP3DhCDiypGgc6+AOWq+Sy+PmP6yiyf8VmvKuoqrPam/tf5x+ZaBT2KI0gl7bptZ7w==
   dependencies:
     css-select "^2.1.0"
@@ -7405,7 +7405,7 @@ react-native-svg@^12.1.0:
 
 react-navigation-fluid-transitions@^0.3.2:
   version "0.3.2"
-  resolved "https://npm-registry.sheep.guru:443/react-navigation-fluid-transitions/-/react-navigation-fluid-transitions-0.3.2.tgz#8cb68a5102432756f80a0862d314b1720ac66501"
+  resolved "https://registry.npmjs.org/react-navigation-fluid-transitions/-/react-navigation-fluid-transitions-0.3.2.tgz#8cb68a5102432756f80a0862d314b1720ac66501"
   integrity sha512-2n7M5QU0vdzclPAOEKPefJ4/0nn8UpKyZYIDl/Y6wXWttLImZ5vMTYU2tR8fgxdCennj+rVkVZI2SND2ftIv/g==
   dependencies:
     lodash.chunk "*"
@@ -8013,7 +8013,7 @@ slice-ansi@^4.0.0:
 
 sliced@^1.0.1:
   version "1.0.1"
-  resolved "https://npm-registry.sheep.guru:443/sliced/-/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
+  resolved "https://registry.npmjs.org/sliced/-/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
   integrity sha1-CzpmK10Ewxd7GSa+qCsD+Dei70E=
 
 slide@^1.1.5:
@@ -8274,7 +8274,7 @@ stringify-object@^3.3.0:
 
 strip-ansi@^3.0.0:
   version "3.0.1"
-  resolved "https://npm-registry.sheep.guru:443/strip-ansi/-/strip-ansi-3.0.1.tgz#6a385fb8853d952d5ff05d0e8aaf94278dc63dcf"
+  resolved "https://registry.npmjs.org/strip-ansi/-/strip-ansi-3.0.1.tgz#6a385fb8853d952d5ff05d0e8aaf94278dc63dcf"
   integrity sha1-ajhfuIU9lS1f8F0Oiq+UJ43GPc8=
   dependencies:
     ansi-regex "^2.0.0"
@@ -8334,7 +8334,7 @@ sudo-prompt@^9.0.0:
 
 supports-color@^2.0.0:
   version "2.0.0"
-  resolved "https://npm-registry.sheep.guru:443/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
+  resolved "https://registry.npmjs.org/supports-color/-/supports-color-2.0.0.tgz#535d045ce6b6363fa40117084629995e9df324c7"
   integrity sha1-U10EXOa2Nj+kARcIRimZXp3zJMc=
 
 supports-color@^5.3.0:
@@ -8452,7 +8452,7 @@ tiny-queue@^0.2.1:
 
 tiny-warning@^1.0.2:
   version "1.0.3"
-  resolved "https://npm-registry.sheep.guru:443/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
+  resolved "https://registry.npmjs.org/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
   integrity sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
 
 tinycolor2@^1.4.1:
@@ -8823,7 +8823,7 @@ vary@~1.1.2:
 
 victory-area@^35.3.3, victory-area@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-area/-/victory-area-35.4.8.tgz#6c46a7871fc370257d49dddd6cba24306eb31aed"
+  resolved "https://registry.npmjs.org/victory-area/-/victory-area-35.4.8.tgz#6c46a7871fc370257d49dddd6cba24306eb31aed"
   integrity sha512-eNr6ZFonAhCHoCetA9g5fJxFn+g+5YpgBmlbxwzE7kgKg+jH7+ViD/R2aNcY6aoljiRyE6DbSVAxDiksPp0q1A==
   dependencies:
     d3-shape "^1.2.0"
@@ -8833,7 +8833,7 @@ victory-area@^35.3.3, victory-area@^35.4.8:
 
 victory-axis@^35.3.3, victory-axis@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-axis/-/victory-axis-35.4.8.tgz#0a7fa1889d8a6fd9bb6b50f49ef3097b2e2740be"
+  resolved "https://registry.npmjs.org/victory-axis/-/victory-axis-35.4.8.tgz#0a7fa1889d8a6fd9bb6b50f49ef3097b2e2740be"
   integrity sha512-+DcevVoIL6tjbTHwGZ2DzZiRl+Pwwowuf99mL10ECRzY+Iuc+s+x4o3gpw/HWJ/dGOyD+kPKPcwilmaQLnEOhQ==
   dependencies:
     lodash "^4.17.19"
@@ -8842,7 +8842,7 @@ victory-axis@^35.3.3, victory-axis@^35.4.8:
 
 victory-bar@^35.3.3, victory-bar@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-bar/-/victory-bar-35.4.8.tgz#8d5e92d0ff02edf932c119a114fefe6f79dabe63"
+  resolved "https://registry.npmjs.org/victory-bar/-/victory-bar-35.4.8.tgz#8d5e92d0ff02edf932c119a114fefe6f79dabe63"
   integrity sha512-9EUxHoX2R7t/iOZEWDtpypX13V2+Pngo2V3I9uW7lHtg+SCKTjGjHP1sJSbwLP3WxHl7dHg3Jg+ok04cych6XQ==
   dependencies:
     d3-shape "^1.2.0"
@@ -8852,7 +8852,7 @@ victory-bar@^35.3.3, victory-bar@^35.4.8:
 
 victory-box-plot@^35.3.3, victory-box-plot@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-box-plot/-/victory-box-plot-35.4.8.tgz#c67dd382becd36b0bc1bd1fcd2e7e849cce00c1c"
+  resolved "https://registry.npmjs.org/victory-box-plot/-/victory-box-plot-35.4.8.tgz#c67dd382becd36b0bc1bd1fcd2e7e849cce00c1c"
   integrity sha512-IMFfCuQHbDBTnAbn4rR+b0rcxngXrDi4r+m/yqXDV9MoIcIRlxoRkVE4yCv+8i6YGHdod2IduCdQc0EOQ9fEdQ==
   dependencies:
     d3-array "^1.2.0"
@@ -8862,7 +8862,7 @@ victory-box-plot@^35.3.3, victory-box-plot@^35.4.8:
 
 victory-brush-container@^35.3.3, victory-brush-container@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-brush-container/-/victory-brush-container-35.4.8.tgz#de8004a19c03c9a9b00e00052f682e7dad0b6892"
+  resolved "https://registry.npmjs.org/victory-brush-container/-/victory-brush-container-35.4.8.tgz#de8004a19c03c9a9b00e00052f682e7dad0b6892"
   integrity sha512-/nTpCijvLfCr86M5P3sr8umLsRJM7GaYODqagRChcPIS5O4oEzRZsgEVhOYmWZZiS56PIjMoLAzMBvgsiwBsDg==
   dependencies:
     lodash "^4.17.19"
@@ -8872,7 +8872,7 @@ victory-brush-container@^35.3.3, victory-brush-container@^35.4.8:
 
 victory-brush-line@^35.3.3, victory-brush-line@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-brush-line/-/victory-brush-line-35.4.8.tgz#92292877909ad3506fd863ebb5e038acb7b96aad"
+  resolved "https://registry.npmjs.org/victory-brush-line/-/victory-brush-line-35.4.8.tgz#92292877909ad3506fd863ebb5e038acb7b96aad"
   integrity sha512-BqPaSqJBQXjuEDaU4Rs2dhTXxpwcj4g5kWT/xkXuLc/Sy+U45xE+15V+E7JYLkV+dWq/LKtTTezURbqNHJ5HoA==
   dependencies:
     lodash "^4.17.19"
@@ -8882,7 +8882,7 @@ victory-brush-line@^35.3.3, victory-brush-line@^35.4.8:
 
 victory-candlestick@^35.3.3, victory-candlestick@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-candlestick/-/victory-candlestick-35.4.8.tgz#b415f18fa3472ce0aab3c8ec21ecc23a74286443"
+  resolved "https://registry.npmjs.org/victory-candlestick/-/victory-candlestick-35.4.8.tgz#b415f18fa3472ce0aab3c8ec21ecc23a74286443"
   integrity sha512-mAXnVyi5lBHFWT3ZTLd3osnL0eFubUYXVJG5x2uPhpq++QRzHqlkYPnDVcqFHUw7MZYQgSJAmjqZ4y7fJmYUzA==
   dependencies:
     lodash "^4.17.19"
@@ -8891,7 +8891,7 @@ victory-candlestick@^35.3.3, victory-candlestick@^35.4.8:
 
 victory-chart@^35.3.3, victory-chart@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-chart/-/victory-chart-35.4.8.tgz#6e6fa4ae9c22098a83f417b187a93c32b4f6ce06"
+  resolved "https://registry.npmjs.org/victory-chart/-/victory-chart-35.4.8.tgz#6e6fa4ae9c22098a83f417b187a93c32b4f6ce06"
   integrity sha512-fUhJ8u3UCH9snSes6bnb7bxg/rwvM223u4XtWa2wmJIDvcjx6GSobiuElklwnEuFQuNn+/fp6KkR1bSt6pnETw==
   dependencies:
     lodash "^4.17.19"
@@ -8904,7 +8904,7 @@ victory-chart@^35.3.3, victory-chart@^35.4.8:
 
 victory-core@^35.3.3, victory-core@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-core/-/victory-core-35.4.8.tgz#c62a6a28b8aa8ad6bbff36e7fbe8945215ddfaf0"
+  resolved "https://registry.npmjs.org/victory-core/-/victory-core-35.4.8.tgz#c62a6a28b8aa8ad6bbff36e7fbe8945215ddfaf0"
   integrity sha512-4yhNeeyttEe24mAG4DUPP3RvditQU+364WTnUS05ZHPrACyDWYTOfN5+L0GzmvkJ3kbteQkfX3UJgpHwwqVmug==
   dependencies:
     d3-ease "^1.0.0"
@@ -8918,7 +8918,7 @@ victory-core@^35.3.3, victory-core@^35.4.8:
 
 victory-create-container@^35.3.3, victory-create-container@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-create-container/-/victory-create-container-35.4.8.tgz#d0f5d2b6d664bc29399899db15c01e59b56a3b43"
+  resolved "https://registry.npmjs.org/victory-create-container/-/victory-create-container-35.4.8.tgz#d0f5d2b6d664bc29399899db15c01e59b56a3b43"
   integrity sha512-1qYRi+npvvWurDjdrC2IthxvTWeKcP1nw8bw2OpL+oG21k/mQBrPGT2GtAmUBGp3e8LDr6BwrCx32FGd01PWYw==
   dependencies:
     lodash "^4.17.19"
@@ -8931,7 +8931,7 @@ victory-create-container@^35.3.3, victory-create-container@^35.4.8:
 
 victory-cursor-container@^35.3.3, victory-cursor-container@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-cursor-container/-/victory-cursor-container-35.4.8.tgz#ca85dd05ecec929dac93c53640b6d874c725a2f7"
+  resolved "https://registry.npmjs.org/victory-cursor-container/-/victory-cursor-container-35.4.8.tgz#ca85dd05ecec929dac93c53640b6d874c725a2f7"
   integrity sha512-KLQug3j4dY8nkcL5CrPqO/pz48hH9chLS86eFiN56gUzLCHx81lEujc01YrsFxQat1cOyC3LghyM+pnexLMWEQ==
   dependencies:
     lodash "^4.17.19"
@@ -8940,7 +8940,7 @@ victory-cursor-container@^35.3.3, victory-cursor-container@^35.4.8:
 
 victory-errorbar@^35.3.3, victory-errorbar@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-errorbar/-/victory-errorbar-35.4.8.tgz#d244af62e001c806575536951d7f0530c1980c42"
+  resolved "https://registry.npmjs.org/victory-errorbar/-/victory-errorbar-35.4.8.tgz#d244af62e001c806575536951d7f0530c1980c42"
   integrity sha512-Zi69HZhW0ae/2VF+kk6Vy1+nULWgoHKlRiUtzfX+m8Udgn7PampC6S4XToXih8gNX4XLCLZXAQc6tNoUw4UkzQ==
   dependencies:
     lodash "^4.17.19"
@@ -8949,7 +8949,7 @@ victory-errorbar@^35.3.3, victory-errorbar@^35.4.8:
 
 victory-group@^35.3.3, victory-group@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-group/-/victory-group-35.4.8.tgz#6a206dcd41bd2ede486fb7f931f7a8c49e9bc2af"
+  resolved "https://registry.npmjs.org/victory-group/-/victory-group-35.4.8.tgz#6a206dcd41bd2ede486fb7f931f7a8c49e9bc2af"
   integrity sha512-MVa8cKEXRDbgC+cCp+mVw+wCi6LA4S3Pyaze0pX/spgbYo6gbl9KGtqLunXoZWRBh6FLZIhFF6c6/p43WRRVgg==
   dependencies:
     lodash "^4.17.19"
@@ -8960,7 +8960,7 @@ victory-group@^35.3.3, victory-group@^35.4.8:
 
 victory-histogram@^35.3.3, victory-histogram@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-histogram/-/victory-histogram-35.4.8.tgz#29b58ea6a42edc9602237fd7419712ece4cfcdc7"
+  resolved "https://registry.npmjs.org/victory-histogram/-/victory-histogram-35.4.8.tgz#29b58ea6a42edc9602237fd7419712ece4cfcdc7"
   integrity sha512-7FEEbs1LpiJ5bhXbpdoW3ZxbQhjfK2hPJuxSoOvH2OWDoxrb5IbgWJio96arANFjAMyXqk15JMoYtbO7arTiNg==
   dependencies:
     d3-array "^2.4.0"
@@ -8973,7 +8973,7 @@ victory-histogram@^35.3.3, victory-histogram@^35.4.8:
 
 victory-legend@^35.3.3, victory-legend@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-legend/-/victory-legend-35.4.8.tgz#179d34f747d4e40ccb3ab9215367d355034cdac3"
+  resolved "https://registry.npmjs.org/victory-legend/-/victory-legend-35.4.8.tgz#179d34f747d4e40ccb3ab9215367d355034cdac3"
   integrity sha512-QI8zZLm8JipzzlAfJjpJm1MHl6FVcXWJOqU2XMl18RCkwDesukIiBO4dU8UAvNRkqxLRmkJzywFXSp3LFEah0Q==
   dependencies:
     lodash "^4.17.19"
@@ -8982,7 +8982,7 @@ victory-legend@^35.3.3, victory-legend@^35.4.8:
 
 victory-line@^35.3.3, victory-line@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-line/-/victory-line-35.4.8.tgz#0460196a5cf66a0f04121d644884e7c5f9605a57"
+  resolved "https://registry.npmjs.org/victory-line/-/victory-line-35.4.8.tgz#0460196a5cf66a0f04121d644884e7c5f9605a57"
   integrity sha512-RJ/Wqon7PS07NRZnlku2C8+cJ48ruunizvKtl7HVv15e1hybo/dCg3dD2IizrO6vF/ja8Iv/RZ2YBDe/nWywrg==
   dependencies:
     d3-shape "^1.2.0"
@@ -8992,7 +8992,7 @@ victory-line@^35.3.3, victory-line@^35.4.8:
 
 victory-native@^35.3.1:
   version "35.3.1"
-  resolved "https://npm-registry.sheep.guru:443/victory-native/-/victory-native-35.3.1.tgz#cd3e22d4d0745ab9c2a53c7ba35fef980ba14adc"
+  resolved "https://registry.npmjs.org/victory-native/-/victory-native-35.3.1.tgz#cd3e22d4d0745ab9c2a53c7ba35fef980ba14adc"
   integrity sha512-VyBDZ0G8k9mcbT5H5ONpx8uxlozYb9QYKmTf0z98elvAxgSC33+rQ5jaEg9JbJ4IpG+ppXZmMXmaZ5qYKUXuwg==
   dependencies:
     lodash "^4.17.19"
@@ -9028,7 +9028,7 @@ victory-native@^35.3.1:
 
 victory-pie@^35.3.3, victory-pie@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-pie/-/victory-pie-35.4.8.tgz#8c33927a892249f255ee219a982c72acffefd443"
+  resolved "https://registry.npmjs.org/victory-pie/-/victory-pie-35.4.8.tgz#8c33927a892249f255ee219a982c72acffefd443"
   integrity sha512-1+FnHdlqYqQzuiA/Psa77dsXcK1sKbXEUjNgnwfEZSUY2HX5v3fQ0sk4AiZhnVVsz6Rp+Wl4We/cca1PHp7i/w==
   dependencies:
     d3-shape "^1.0.0"
@@ -9038,7 +9038,7 @@ victory-pie@^35.3.3, victory-pie@^35.4.8:
 
 victory-polar-axis@^35.3.3, victory-polar-axis@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-polar-axis/-/victory-polar-axis-35.4.8.tgz#daedd7aa26a515acd476adb176a8e6a29c6934db"
+  resolved "https://registry.npmjs.org/victory-polar-axis/-/victory-polar-axis-35.4.8.tgz#daedd7aa26a515acd476adb176a8e6a29c6934db"
   integrity sha512-rhNGYUj7A70ZoHyta0ma3WD12Kv162Mf0AmFLvfxC6W+4eh2uwgGE8j+CJBW+/HbzLhFoeDY+aTe0FqJPLiO4A==
   dependencies:
     lodash "^4.17.19"
@@ -9047,7 +9047,7 @@ victory-polar-axis@^35.3.3, victory-polar-axis@^35.4.8:
 
 victory-scatter@^35.3.3, victory-scatter@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-scatter/-/victory-scatter-35.4.8.tgz#8e48c8b5669cb7096bb09aabfbe3c288ad880729"
+  resolved "https://registry.npmjs.org/victory-scatter/-/victory-scatter-35.4.8.tgz#8e48c8b5669cb7096bb09aabfbe3c288ad880729"
   integrity sha512-UWyYgUhvdMFBkzBrgvN5WFCFX1E7tG6EjLNvAhsMoGK2eVH69QzC7Aiun+hLeXUXcssg2Gi1+f/w4rrxpdpZzw==
   dependencies:
     lodash "^4.17.19"
@@ -9056,7 +9056,7 @@ victory-scatter@^35.3.3, victory-scatter@^35.4.8:
 
 victory-selection-container@^35.3.3, victory-selection-container@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-selection-container/-/victory-selection-container-35.4.8.tgz#e356700230b731b015a0f3a8820e7c62b86c6ab7"
+  resolved "https://registry.npmjs.org/victory-selection-container/-/victory-selection-container-35.4.8.tgz#e356700230b731b015a0f3a8820e7c62b86c6ab7"
   integrity sha512-2I2pEoUwjEltm0hJO+EwTlcrVhfvchph3OlcGp3N/Kw9q5veS/gfvcQMwur0FjS2GNwwCSjW/Gbv8zv31B/xFg==
   dependencies:
     lodash "^4.17.19"
@@ -9065,7 +9065,7 @@ victory-selection-container@^35.3.3, victory-selection-container@^35.4.8:
 
 victory-shared-events@^35.3.3, victory-shared-events@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-shared-events/-/victory-shared-events-35.4.8.tgz#ae86641975cfcbb7dbc5e930aacedceb620aeadd"
+  resolved "https://registry.npmjs.org/victory-shared-events/-/victory-shared-events-35.4.8.tgz#ae86641975cfcbb7dbc5e930aacedceb620aeadd"
   integrity sha512-8CYU+J9tL8ImwuUAn5HS6wAeKDGi64pWa9Nt/azrJgWG2S4oHTQcSSZYGyYt5gScsDj3ci4TnbZpWSNGoS8USQ==
   dependencies:
     json-stringify-safe "^5.0.1"
@@ -9076,7 +9076,7 @@ victory-shared-events@^35.3.3, victory-shared-events@^35.4.8:
 
 victory-stack@^35.3.3, victory-stack@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-stack/-/victory-stack-35.4.8.tgz#fcc341e3b1c1d7a343f6e3b1abeb2bf2b0aac192"
+  resolved "https://registry.npmjs.org/victory-stack/-/victory-stack-35.4.8.tgz#fcc341e3b1c1d7a343f6e3b1abeb2bf2b0aac192"
   integrity sha512-VMZ6tq16PH1S4x4ZzPKgf3AHVH2Ty70VdtDUkfjEyliaYWe6bGgMH7P0NTORFDn7NwN9npcrmNfv4RGdlLE1sA==
   dependencies:
     lodash "^4.17.19"
@@ -9087,7 +9087,7 @@ victory-stack@^35.3.3, victory-stack@^35.4.8:
 
 victory-tooltip@^35.3.3, victory-tooltip@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-tooltip/-/victory-tooltip-35.4.8.tgz#0d29276d3717cfbf500dd3d571c2087cd7c7a4c8"
+  resolved "https://registry.npmjs.org/victory-tooltip/-/victory-tooltip-35.4.8.tgz#0d29276d3717cfbf500dd3d571c2087cd7c7a4c8"
   integrity sha512-CZLsLgfxUA6PdaIxUgIk4DJfoo5DRM70OLTZFekctQkvwt2S6Fc7DSv47ZvFw7nL6SEVaNjwsDmTZnabUJb+4Q==
   dependencies:
     lodash "^4.17.19"
@@ -9096,7 +9096,7 @@ victory-tooltip@^35.3.3, victory-tooltip@^35.4.8:
 
 victory-voronoi-container@^35.3.3, victory-voronoi-container@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-voronoi-container/-/victory-voronoi-container-35.4.8.tgz#ab25bcc5b34cacf08fe8d738b88d89c8f9c98d1c"
+  resolved "https://registry.npmjs.org/victory-voronoi-container/-/victory-voronoi-container-35.4.8.tgz#ab25bcc5b34cacf08fe8d738b88d89c8f9c98d1c"
   integrity sha512-+rQRr2SwdixwxvUSF4NUsPj7yWpkeQcQZWcPz8NNNpaCBxN1HNVQ41W7DmAZ98Spta2gkrk6888Q31zQeiGDXw==
   dependencies:
     delaunay-find "0.0.5"
@@ -9108,7 +9108,7 @@ victory-voronoi-container@^35.3.3, victory-voronoi-container@^35.4.8:
 
 victory-voronoi@^35.3.3, victory-voronoi@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-voronoi/-/victory-voronoi-35.4.8.tgz#0fdc3e4bba5bc4512f119c22e17fe430dd9e78ec"
+  resolved "https://registry.npmjs.org/victory-voronoi/-/victory-voronoi-35.4.8.tgz#0fdc3e4bba5bc4512f119c22e17fe430dd9e78ec"
   integrity sha512-2k7+LzqP9Q11be4YAagWPOR39EHBahrHk5w3AqMIwHqOahDQ3Du0atpTHDoT50dXMzJVU/aebI6MFkPSvCqqow==
   dependencies:
     d3-voronoi "^1.1.2"
@@ -9118,7 +9118,7 @@ victory-voronoi@^35.3.3, victory-voronoi@^35.4.8:
 
 victory-zoom-container@^35.3.3, victory-zoom-container@^35.4.8:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory-zoom-container/-/victory-zoom-container-35.4.8.tgz#4e9a86bf79245a3937b7a60163b47bc8e5ff15ae"
+  resolved "https://registry.npmjs.org/victory-zoom-container/-/victory-zoom-container-35.4.8.tgz#4e9a86bf79245a3937b7a60163b47bc8e5ff15ae"
   integrity sha512-jLHm0/wttiRIzCEdxK3SL/emNUkfc9Rt64I2Yp+9OuP+YJP+5/MkuavjjnYaVowBD3sbn6ByGBMkJ8e+Q/U7dA==
   dependencies:
     lodash "^4.17.19"
@@ -9127,7 +9127,7 @@ victory-zoom-container@^35.3.3, victory-zoom-container@^35.4.8:
 
 victory@^35.3.3:
   version "35.4.8"
-  resolved "https://npm-registry.sheep.guru:443/victory/-/victory-35.4.8.tgz#06f184b5890cdc234bc71b1537e2d8c67304a188"
+  resolved "https://registry.npmjs.org/victory/-/victory-35.4.8.tgz#06f184b5890cdc234bc71b1537e2d8c67304a188"
   integrity sha512-RDMF9oQGWuxax6W/uh5/PECxZY81EJeznyUPv+wjPpnPxQTOMERtpL1BXDvQMBsV/MhRbSe2+w12VOjNuKbblw==
   dependencies:
     victory-area "^35.4.8"

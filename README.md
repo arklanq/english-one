@@ -2,25 +2,12 @@
 
 `React Native` | `Expo` | `TypeScript` | `React Native Paper`
 
-### Instalacja projektu
+> Wszelkie instrukcje dostępne są w ramach Github Wiki.
 
-> Wymagny zaintalowany Node.JS w wersji 14
+![Screen 1](screens/1.jpg)
 
-> Jeśli jeszcze nie mamy zainstalowanego `Yarn'a` należy zainstalować go poleceniem
-> `npm install -g yarn`
+![Screen 2](screens/2.jpg)
 
-1. `yarn install`
-2. `yarn global add expo-cli`
+![Screen 3](screens/3.jpg)
 
-### Uruchomienie projektu
-
-> Możliwe iż wymagane będzie zalogowanie się na własne konto Expo. W tym celu rejestrujemy się pod adresem
-> `https://expo.io/`, a następnie logujemy się komendą `expo-cli login`
-
-1. `yarn start`
-
-### Budowa binarek .APK
-
-> (Zaleca się budowanie binarek testowych na kanale innym niż produkcyjny: stąd `--release-channel dev`)
-
-`expo build:android -t apk --release-channel dev`
+![Screen 4](screens/4.jpg)
