@@ -2,12 +2,20 @@
 
 `React Native` | `Expo` | `TypeScript` | `React Native Paper`
 
-> Wszelkie instrukcje dostępne są w ramach Github Wiki.
+Project of a mobile application created for learning English.
 
-![Screen 1](screens/1.jpg)
+<img src="screens/1.jpg" width="400px" />
 
-![Screen 2](screens/2.jpg)
+<br/>
 
-![Screen 3](screens/3.jpg)
+<img src="screens/2.jpg" width="400px" />
 
-![Screen 4](screens/4.jpg)
+<br/>
+
+<img src="screens/3.jpg" width="400px" />
+
+<br/>
+
+<img src="screens/4.jpg" width="400px" />
+
+<br/>
